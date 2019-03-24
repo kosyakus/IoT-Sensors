@@ -23,6 +23,8 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     self.device = BluetoothManager.instance.device;
+    //self.view.frame = [[UIScreen mainScreen] bounds]; //Natali added
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 2000); //CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+300)
 
     NSMutableArray *toolbarButtons = [self.navigationItem.rightBarButtonItems mutableCopy];
     [self.navigationItem setRightBarButtonItems:toolbarButtons animated:NO];

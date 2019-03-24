@@ -1470,13 +1470,13 @@
                         <viewControllerLayoutGuide type="bottom" id="gt2-yw-YB9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="06k-Ss-fhY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2J-BE-xHM">
                                 <rect key="frame" x="0.0" y="64" width="600" height="846"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-mH-gnw">
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-mH-gnw">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="846"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5G-6r-Fuw" customClass="GLModelView">
@@ -1509,7 +1509,7 @@
                                                     <constraint firstItem="p2n-JG-arj" firstAttribute="top" secondItem="M5G-6r-Fuw" secondAttribute="top" constant="658" id="kJE-cO-DjF"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmc-xF-8rK">
+                                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmc-xF-8rK">
                                                 <rect key="frame" x="0.0" y="310" width="600" height="536"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3EX-AQ-agu">
@@ -1700,11 +1700,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
+                    <size key="freeformSize" width="600" height="810"/>
                     <connections>
                         <outlet property="magnetoStateOverlay" destination="Thc-FE-3ew" id="XrV-1e-AEX"/>
                         <outlet property="magnetoStateOverlayView" destination="YwO-Km-Btr" id="WSb-1z-8Nh"/>
                         <outlet property="modelView" destination="M5G-6r-Fuw" id="lXl-Mn-71q"/>
+                        <outlet property="scrollView" destination="d2J-BE-xHM" id="zXY-mO-HZ4"/>
                         <outlet property="sensorToggleButton" destination="b5B-MZ-faf" id="iE0-2P-tyT"/>
                     </connections>
                 </viewController>
@@ -2889,11 +2890,11 @@
                         <viewControllerLayoutGuide type="bottom" id="UYt-KE-U8V"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oTy-FG-e89">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666666"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWA-mw-jhP" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWB-54-Xfg">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -2902,7 +2903,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6M-1A-bWD">
-                                        <rect key="frame" x="129" y="35.333333333333343" width="42" height="108"/>
+                                        <rect key="frame" x="129" y="42.666666666666657" width="42" height="108"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-temp-filled" translatesAutoresizingMaskIntoConstraints="NO" id="0Im-xL-V9t">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="108"/>
@@ -2936,7 +2937,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM3-y8-S7e">
-                                        <rect key="frame" x="8" y="152.66666666666666" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="167.33333333333334" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4790,11 +4791,11 @@
                         <viewControllerLayoutGuide type="bottom" id="06i-fu-PMH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RKN-k6-cZC">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666663"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-a1-kBo" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q25-lD-w0w">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -4803,7 +4804,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1h-le-ujM">
-                                        <rect key="frame" x="116.66666666666669" y="41.333333333333343" width="67" height="96"/>
+                                        <rect key="frame" x="116.66666666666669" y="48.666666666666657" width="67" height="96"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-humid-filled" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-Us-tdT">
                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="96"/>
@@ -4827,7 +4828,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYs-fD-EGB">
-                                        <rect key="frame" x="8" y="152.66666666666666" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="167.33333333333334" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4874,11 +4875,11 @@
                         <viewControllerLayoutGuide type="bottom" id="93E-MQ-32H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="29l-Q1-VQn">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666663"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-Xf-nO7" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-Nb-5tY">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -4887,14 +4888,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-pressure" translatesAutoresizingMaskIntoConstraints="NO" id="idG-23-BNp">
-                                        <rect key="frame" x="130.66666666666666" y="30.333333333333329" width="39" height="117.99999999999999"/>
+                                        <rect key="frame" x="130.66666666666666" y="37.666666666666657" width="39" height="118"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="118" id="6Fa-wm-0td"/>
                                             <constraint firstAttribute="width" constant="39" id="75A-pJ-oMh"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-8F-UuK">
-                                        <rect key="frame" x="8" y="152.66666666666666" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="167.33333333333334" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5008,102 +5009,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3b-cP-RH9" customClass="GLModelView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="310"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaY-aU-uwK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-Hp-Sbs">
-                                        <rect key="frame" x="356" y="658" width="50" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3b-cP-RH9" customClass="GLModelView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="310"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mag_disabled.png" translatesAutoresizingMaskIntoConstraints="NO" id="l4I-07-aMI">
-                                                <rect key="frame" x="7" y="7" width="36" height="36"/>
-                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-Hp-Sbs">
+                                                <rect key="frame" x="356" y="658" width="50" height="50"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mag_disabled.png" translatesAutoresizingMaskIntoConstraints="NO" id="l4I-07-aMI">
+                                                        <rect key="frame" x="7" y="7" width="36" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="0.24822695040000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="l4I-07-aMI" firstAttribute="leading" secondItem="wtH-Hp-Sbs" secondAttribute="leading" constant="7" id="6yx-qq-ieO"/>
+                                                    <constraint firstAttribute="width" constant="50" id="B1C-2p-ejP"/>
+                                                    <constraint firstItem="l4I-07-aMI" firstAttribute="centerY" secondItem="wtH-Hp-Sbs" secondAttribute="centerY" id="CJ9-1f-Yoy"/>
+                                                    <constraint firstAttribute="height" constant="50" id="L3I-Rr-M4o"/>
+                                                    <constraint firstItem="l4I-07-aMI" firstAttribute="centerX" secondItem="wtH-Hp-Sbs" secondAttribute="centerX" id="ZiF-ET-qTZ"/>
+                                                    <constraint firstItem="l4I-07-aMI" firstAttribute="top" secondItem="wtH-Hp-Sbs" secondAttribute="top" constant="7" id="reK-V9-Aqg"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="0.24822695040000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="l4I-07-aMI" firstAttribute="leading" secondItem="wtH-Hp-Sbs" secondAttribute="leading" constant="7" id="6yx-qq-ieO"/>
-                                            <constraint firstAttribute="width" constant="50" id="B1C-2p-ejP"/>
-                                            <constraint firstItem="l4I-07-aMI" firstAttribute="centerY" secondItem="wtH-Hp-Sbs" secondAttribute="centerY" id="CJ9-1f-Yoy"/>
-                                            <constraint firstAttribute="height" constant="50" id="L3I-Rr-M4o"/>
-                                            <constraint firstItem="l4I-07-aMI" firstAttribute="centerX" secondItem="wtH-Hp-Sbs" secondAttribute="centerX" id="ZiF-ET-qTZ"/>
-                                            <constraint firstItem="l4I-07-aMI" firstAttribute="top" secondItem="wtH-Hp-Sbs" secondAttribute="top" constant="7" id="reK-V9-Aqg"/>
+                                            <constraint firstAttribute="width" constant="600" id="Ncw-MS-NTD"/>
+                                            <constraint firstAttribute="height" constant="310" id="Xd0-IO-h1E"/>
+                                            <constraint firstItem="wtH-Hp-Sbs" firstAttribute="leading" secondItem="W3b-cP-RH9" secondAttribute="leading" constant="356" id="mkp-fQ-6pY"/>
+                                            <constraint firstItem="wtH-Hp-Sbs" firstAttribute="top" secondItem="W3b-cP-RH9" secondAttribute="top" constant="658" id="pIF-2A-NUh"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="wtH-Hp-Sbs" firstAttribute="leading" secondItem="W3b-cP-RH9" secondAttribute="leading" constant="356" id="mkp-fQ-6pY"/>
-                                    <constraint firstItem="wtH-Hp-Sbs" firstAttribute="top" secondItem="W3b-cP-RH9" secondAttribute="top" constant="658" id="pIF-2A-NUh"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aUc-Pb-Hwu">
-                                <rect key="frame" x="0.0" y="305" width="600" height="580"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x62-Xp-k8k">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="580"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aUc-Pb-Hwu">
+                                        <rect key="frame" x="0.0" y="310" width="600" height="580"/>
                                         <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-Nc-dqy">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
-                                                <connections>
-                                                    <segue destination="fRo-Mh-VsI" kind="embed" identifier="sensorTemperature" id="d31-t6-oYk"/>
-                                                </connections>
-                                            </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-dj-fsj">
-                                                <rect key="frame" x="0.0" y="193.33333333333331" width="300" height="193.33333333333331"/>
-                                                <connections>
-                                                    <segue destination="WZK-No-gUe" kind="embed" identifier="sensorHumidity" id="J4s-Yp-05i"/>
-                                                </connections>
-                                            </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZy-fY-J1M">
-                                                <rect key="frame" x="0.0" y="386.66666666666663" width="300" height="193.33333333333337"/>
-                                                <connections>
-                                                    <segue destination="YUE-AX-Sm0" kind="embed" identifier="sensorPressure" id="VsE-5R-Axh"/>
-                                                </connections>
-                                            </containerView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lS1-ej-gr3">
-                                        <rect key="frame" x="300" y="0.0" width="300" height="580"/>
-                                        <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-EX-zce">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="193"/>
-                                                <connections>
-                                                    <segue destination="7J9-5A-SI4" kind="embed" identifier="sensorAmbientLight" id="HS0-V0-gGb"/>
-                                                </connections>
-                                            </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-pw-JLh">
-                                                <rect key="frame" x="0.0" y="193" width="300" height="194"/>
-                                                <connections>
-                                                    <segue destination="Ukj-m2-DQ8" kind="embed" identifier="sensorAirQuality" id="4tk-78-PiZ"/>
-                                                </connections>
-                                            </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jj-7r-cuA">
-                                                <rect key="frame" x="0.0" y="387" width="300" height="193"/>
-                                                <connections>
-                                                    <segue destination="jpQ-Wf-tMD" kind="embed" identifier="sensorProximity" id="TMG-tK-GJ8"/>
-                                                </connections>
-                                            </containerView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x62-Xp-k8k">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="580"/>
+                                                <subviews>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-Nc-dqy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
+                                                        <connections>
+                                                            <segue destination="fRo-Mh-VsI" kind="embed" identifier="sensorTemperature" id="d31-t6-oYk"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-dj-fsj">
+                                                        <rect key="frame" x="0.0" y="193.33333333333331" width="300" height="193.33333333333331"/>
+                                                        <connections>
+                                                            <segue destination="WZK-No-gUe" kind="embed" identifier="sensorHumidity" id="J4s-Yp-05i"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZy-fY-J1M">
+                                                        <rect key="frame" x="0.0" y="386.66666666666663" width="300" height="193.33333333333337"/>
+                                                        <connections>
+                                                            <segue destination="YUE-AX-Sm0" kind="embed" identifier="sensorPressure" id="VsE-5R-Axh"/>
+                                                        </connections>
+                                                    </containerView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lS1-ej-gr3">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="580"/>
+                                                <subviews>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-EX-zce">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="193"/>
+                                                        <connections>
+                                                            <segue destination="7J9-5A-SI4" kind="embed" identifier="sensorAmbientLight" id="HS0-V0-gGb"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-pw-JLh">
+                                                        <rect key="frame" x="0.0" y="193" width="300" height="194"/>
+                                                        <connections>
+                                                            <segue destination="Ukj-m2-DQ8" kind="embed" identifier="sensorAirQuality" id="4tk-78-PiZ"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jj-7r-cuA">
+                                                        <rect key="frame" x="0.0" y="387" width="300" height="193"/>
+                                                        <connections>
+                                                            <segue destination="jpQ-Wf-tMD" kind="embed" identifier="sensorProximity" id="TMG-tK-GJ8"/>
+                                                        </connections>
+                                                    </containerView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="zQD-pw-JLh" firstAttribute="centerY" secondItem="lS1-ej-gr3" secondAttribute="centerY" id="LuJ-7x-ywv"/>
+                                                    <constraint firstItem="zQD-pw-JLh" firstAttribute="top" secondItem="lS1-ej-gr3" secondAttribute="top" constant="193" id="mzW-iY-GGB"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="zQD-pw-JLh" firstAttribute="centerY" secondItem="lS1-ej-gr3" secondAttribute="centerY" id="LuJ-7x-ywv"/>
-                                            <constraint firstItem="zQD-pw-JLh" firstAttribute="top" secondItem="lS1-ej-gr3" secondAttribute="top" constant="193" id="mzW-iY-GGB"/>
+                                            <constraint firstAttribute="height" constant="580" id="TUy-62-Jyh"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="aUc-Pb-Hwu" firstAttribute="trailing" secondItem="W3b-cP-RH9" secondAttribute="trailing" id="0Rs-UN-mCa"/>
+                                    <constraint firstItem="aUc-Pb-Hwu" firstAttribute="leading" secondItem="uaY-aU-uwK" secondAttribute="leading" id="7W6-PA-dpm"/>
+                                    <constraint firstItem="aUc-Pb-Hwu" firstAttribute="top" secondItem="uaY-aU-uwK" secondAttribute="top" constant="310" id="8BQ-zh-ZX5"/>
+                                    <constraint firstItem="aUc-Pb-Hwu" firstAttribute="width" secondItem="uaY-aU-uwK" secondAttribute="width" id="OAJ-ED-j6E"/>
+                                    <constraint firstItem="W3b-cP-RH9" firstAttribute="leading" secondItem="uaY-aU-uwK" secondAttribute="leading" id="PgO-Uh-eiA"/>
+                                    <constraint firstItem="W3b-cP-RH9" firstAttribute="top" secondItem="uaY-aU-uwK" secondAttribute="top" id="R8v-lG-wQv"/>
+                                    <constraint firstAttribute="bottom" secondItem="aUc-Pb-Hwu" secondAttribute="bottom" constant="246" id="b7w-uY-MmZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="W3b-cP-RH9" secondAttribute="trailing" id="d3K-RQ-EBd"/>
+                                    <constraint firstAttribute="trailing" secondItem="aUc-Pb-Hwu" secondAttribute="trailing" id="siQ-Tj-5ry"/>
+                                    <constraint firstItem="aUc-Pb-Hwu" firstAttribute="leading" secondItem="W3b-cP-RH9" secondAttribute="leading" id="uQ6-Ic-2pY"/>
+                                    <constraint firstItem="W3b-cP-RH9" firstAttribute="width" secondItem="uaY-aU-uwK" secondAttribute="width" id="x0A-xB-Pcu"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="W3b-cP-RH9" firstAttribute="top" secondItem="Z0g-G2-yLn" secondAttribute="top" id="BAP-Rz-eTU"/>
-                            <constraint firstItem="aUc-Pb-Hwu" firstAttribute="trailing" secondItem="W3b-cP-RH9" secondAttribute="trailing" id="Bb0-pY-Iet"/>
-                            <constraint firstItem="9Sw-Uh-QrK" firstAttribute="top" secondItem="W3b-cP-RH9" secondAttribute="bottom" constant="290" id="PU4-47-NSE"/>
-                            <constraint firstItem="aUc-Pb-Hwu" firstAttribute="leading" secondItem="W3b-cP-RH9" secondAttribute="leading" id="Pj0-4v-Hho"/>
-                            <constraint firstAttribute="bottom" secondItem="aUc-Pb-Hwu" secondAttribute="bottom" constant="-285" id="QDD-Uj-d4V"/>
-                            <constraint firstItem="aUc-Pb-Hwu" firstAttribute="leading" secondItem="Z0g-G2-yLn" secondAttribute="leading" id="Ufy-Jp-2kk"/>
-                            <constraint firstItem="aUc-Pb-Hwu" firstAttribute="top" secondItem="6th-Pd-oLA" secondAttribute="bottom" constant="285" id="jcd-ba-Vuh"/>
-                            <constraint firstAttribute="trailing" secondItem="aUc-Pb-Hwu" secondAttribute="trailing" id="mJy-qT-pWx"/>
+                            <constraint firstItem="uaY-aU-uwK" firstAttribute="bottom" secondItem="9Sw-Uh-QrK" secondAttribute="top" id="4UQ-9p-9h6"/>
+                            <constraint firstAttribute="trailing" secondItem="uaY-aU-uwK" secondAttribute="trailing" id="8pD-id-ETi"/>
+                            <constraint firstItem="uaY-aU-uwK" firstAttribute="top" secondItem="Z0g-G2-yLn" secondAttribute="top" id="CaQ-qM-Bgi"/>
+                            <constraint firstItem="uaY-aU-uwK" firstAttribute="leading" secondItem="Z0g-G2-yLn" secondAttribute="leading" id="FEp-7j-7xq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="IoT Sensors" id="qIF-2I-SPe">
@@ -5123,12 +5143,13 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="modelView" destination="W3b-cP-RH9" id="xRy-f5-jkV"/>
+                        <outlet property="scrollView" destination="uaY-aU-uwK" id="tLf-Gz-Xmr"/>
                         <outlet property="sensorToggleButton" destination="PdN-5e-LQR" id="iWo-Pt-W2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpr-jT-bae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="-113"/>
+            <point key="canvasLocation" x="2640.579710144928" y="-113.31521739130436"/>
         </scene>
         <!--Ambient Light Sensor View Controller-->
         <scene sceneID="U0u-3Y-fU4">
@@ -5766,11 +5787,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="l4H-Nt-H84"/>
         <segue reference="ZWw-dM-NtY"/>
-        <segue reference="hDu-QB-9Sw"/>
-        <segue reference="Dbf-lM-i22"/>
+        <segue reference="VsE-5R-Axh"/>
+        <segue reference="J4s-Yp-05i"/>
         <segue reference="ajM-Nj-jwe"/>
         <segue reference="WjE-Xi-AT3"/>
         <segue reference="TEo-nP-uBm"/>
-        <segue reference="zoD-t7-o7R"/>
+        <segue reference="d31-t6-oYk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -39,6 +39,7 @@
 //Natali added
 @property (weak, nonatomic) IBOutlet GLModelView *modelView;
 @property SensorFusion* sensor;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 
 - (IBAction)onSensorToggleButton:(id)sender;

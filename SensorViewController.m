@@ -73,6 +73,13 @@
         self.sensorViewAccelerometer.sensor = !self.device.integrationEngine ? self.device.accelerometer : self.device.accelerometerIntegration;
         self.sensorViewGyroscope.sensor = !self.device.integrationEngine ? self.device.gyroscope : self.device.gyroscopeAngleIntegration;
     }
+    
+    
+    //Natali added for model view
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSensorReport1:) name:IotSensorsManagerSensorReport object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didUpdateSensorState1:) name:IotSensorsManagerSensorStateReport object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didUpdateMagnetometerState1:) name:IotSensorsManagerMagnetometerState object:nil];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -204,6 +211,53 @@
     return transform;
 }
 
+- (void) onSensorReport1:(NSNotification*)notification {
+    NSArray* reports = (NSArray*) notification.object;
+    if (![reports containsObject:@(SENSOR_REPORT_SENSOR_FUSION)])
+        return;
+    
+    IotSensorValue* value = self.sensor.valueRad;
+    self.modelView.modelTransform = [self createModelTransformWithRoll:value.roll yaw:value.yaw pitch:value.pitch];
+}
+
+- (void) didUpdateSensorState1:(NSNotification*)notification {
+    BOOL sensorState = [notification.object boolValue];
+    self.sensorToggleButton.title = sensorState ? @"Stop" : @"Start";
+}
+
+- (void)didUpdateMagnetometerState1:(NSNotification*)notification {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"ShowCalibrationOverlay"])
+        return;
+    if (!self.device.isNewVersion)
+        return;
+    
+    int oldCalibrationState = calibrationState;
+    calibrationState = [notification.object[@"calibrationState"] intValue];
+    if (calibrationState == oldCalibrationState)
+        return;
+    
+    self.magnetoStateOverlayView.hidden = NO;
+    switch (calibrationState) {
+        case 0: // DISABLED
+            [self.magnetoStateOverlay setImage:[UIImage imageNamed:@"mag_disabled"]];
+            break;
+        case 1: // INIT
+            [self.magnetoStateOverlay setImage:[UIImage imageNamed:@"mag_init"]];
+            break;
+        case 2: // BAD
+            [self.magnetoStateOverlay setImage:[UIImage imageNamed:@"mag_bad"]];
+            break;
+        case 3: // OK
+            [self.magnetoStateOverlay setImage:[UIImage imageNamed:@"mag_ok"]];
+            break;
+        case 4: // GOOD
+            [self.magnetoStateOverlay setImage:[UIImage imageNamed:@"mag_good"]];
+            break;
+        case 5: // ERROR
+            [self.magnetoStateOverlay setImage:[UIImage imageNamed:@"mag_error"]];
+            break;
+    }
+}
 
 
 

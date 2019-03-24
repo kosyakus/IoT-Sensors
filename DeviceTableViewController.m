@@ -446,10 +446,10 @@
 
     info[@"deviceType"] = @(type);
     info[@"ekid"] = ekid;
-    cell.deviceNameLabel.text = [IotDeviceSpec getProperNameFromAdvName:name];
-    cell.deviceImageView.image = [UIImage imageNamed:icon];
-    cell.versionLabel.text = [NSString stringWithFormat:@"Software: %@", mode];
-    cell.addressLabel.text = [NSString stringWithFormat:@"BDA: %@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+    cell.deviceNameLabel.text = @"Главная дорога"; //[IotDeviceSpec getProperNameFromAdvName:name];
+    cell.deviceImageView.image = [UIImage imageNamed: @"mainRoad.png"]; //[UIImage imageNamed:icon];
+    cell.versionLabel.text = @"Дорожный знак №2.1"; //[NSString stringWithFormat:@"Software: %@", mode];
+    cell.addressLabel.text = @""; //[NSString stringWithFormat:@"BDA: %@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
 
     if (info[@"RSSI"]) {
         NSNumber *RSSI = info[@"RSSI"];

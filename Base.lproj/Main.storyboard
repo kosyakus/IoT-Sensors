@@ -4737,20 +4737,20 @@
                         <viewControllerLayoutGuide type="bottom" id="06i-fu-PMH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RKN-k6-cZC">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666669"/>
+                        <rect key="frame" x="0.0" y="0.0" width="299.66666666666669" height="178.66666666666669"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-a1-kBo" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="178.66666666666666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="299.66666666666669" height="178.66666666666666"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q25-lD-w0w">
-                                        <rect key="frame" x="8" y="20" width="284" height="20"/>
+                                        <rect key="frame" x="8" y="20" width="283.66666666666669" height="20"/>
                                         <fontDescription key="fontDescription" name="RockwellStd" family="Rockwell Std" pointSize="20"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1h-le-ujM">
-                                        <rect key="frame" x="116.66666666666669" y="41.333333333333343" width="67" height="96"/>
+                                        <rect key="frame" x="116.33333333333331" y="41.333333333333343" width="67" height="96"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-humid-filled" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-Us-tdT">
                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="96"/>
@@ -4774,7 +4774,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYs-fD-EGB">
-                                        <rect key="frame" x="8" y="152.66666666666666" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="152.66666666666666" width="283.66666666666669" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>

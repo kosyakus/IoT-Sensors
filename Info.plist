@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>APIKey</key>
+	<string>eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LmM0ZTg0NDQyNmM0YzRmMWZiNGE1NDZhOWM2MGJiNDM0IiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi4yNzMwZWFmZTliMzA0M2E2YmFmYTRiZmFhOGVlN2ZmMSIsImJ1bmRsZVNlZWRJZCI6ImNvbS5kaWFzZW1pLmlvdC1zZW5zb3ItYXBwIiwiYnVuZGxlSWQiOiJjb20uZGlhc2VtaS5pb3Qtc2Vuc29yLWFwcCIsImlzcyI6IkFtYXpvbiIsInR5cGUiOiJBUElLZXkiLCJhcHBWYXJpYW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1jbGllbnQuOTNjZDFiMzU0NWMzNDVkY2JkYzJjODBmN2RiYmJmNGUiLCJ0cnVzdFBvb2wiOm51bGwsImFwcElkIjoiYW16bjEuYXBwbGljYXRpb24tY2xpZW50LjkzY2QxYjM1NDVjMzQ1ZGNiZGMyYzgwZjdkYmJiZjRlIiwiaWQiOiIxZjdmNTg4YS1hNTMxLTExZTgtODZlZS1jMzM4NzdmZWY0Y2MiLCJpYXQiOiIxNTM0ODQ5MTAzNTM4In0=.GyJude68i5HD2VDHwembe+YMs0UR2crtHjuJW8gb08MEQYdnlqbGkJtwdHa5EnRQ7LMUgLnVdDyK9WNcOkoYatoiFAIYUg/2YGP94/fu31wdGvX0L02xQv1DIA8Q/nlyIb8LvycSOOdxXU1MVCv317lsl7NblT2/jnn5K3rb8eftmGYqnTD3HLIYNgMzj1VTifxNRVoymAx5IZF96bxG1OJtgNo7KEy+JUGvC80Y3qW8dlZJm77D71KnmzvrJb/JIRH6LPCir6EpY/yaEcWDRr9Py6LCT327/5CS7P+xKCoS+ppSmjjg03VOb6OxmvzbuJCyDXyEj1JAHbW0tWTs7A==</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>IoT Sensors</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.260.12</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.diasemi.iot-sensor-app</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>amzn-com.diasemi.iot-sensor-app</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>3.260.12</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Required in order to connect to Dialog IoT Sensor peripherals.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Required in order to track iBeacon assets.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Required in order to track iBeacon assets.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Required in order to track iBeacon assets.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Required in order to record voice commands for Amazon Alexa communication.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>RockwellStd.otf</string>
+		<string>Rockwell.otf</string>
+		<string>MyriadPro-Bold.otf</string>
+		<string>MyriadPro-Regular.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>location</string>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

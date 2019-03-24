@@ -1,0 +1,24 @@
+{
+    "images": [
+        {
+            "filename": "icon-cloud-asset-tracking.png",
+            "idiom": "universal",
+            "scale": "1x"
+        },
+        {
+            "filename": "icon-cloud-asset-tracking@2x.png",
+            "idiom": "universal",
+            "scale": "2x"
+        },
+        {
+            "filename": "icon-cloud-asset-tracking@3x.png",
+            "idiom": "universal",
+            "scale": "3x"
+        }
+    ],
+    "info": {
+        "author": "xcode",
+        "template-rendering-intent": "template",
+        "version": 1
+    }
+}

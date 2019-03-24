@@ -1,0 +1,8 @@
+newmtl material20
+Ka 0.500000 0.500000 0.500000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 20.000000
+Tr 0.000000
+illum 1
+map_Kd \Dialog_Watch_new_TXT.jpg

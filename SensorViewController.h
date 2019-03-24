@@ -36,6 +36,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *buttonOverlay;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sensorToggleButton;
 
+//Natali added
+@property (weak, nonatomic) IBOutlet GLModelView *modelView;
+@property SensorFusion* sensor;
+
+
 - (IBAction)onSensorToggleButton:(id)sender;
 - (IBAction)onShowMenu:(id)sender;
 

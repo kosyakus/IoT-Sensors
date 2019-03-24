@@ -30,6 +30,30 @@
     self.sensorViewMagnetometer.imageViewWarning.hidden = YES;
     self.buttonOverlay.tintColor = UIColorWithRGB(0x1E88E5);
     self.buttonOverlayView.hidden = YES;
+    
+    //Natali addede for model
+    self.device = BluetoothManager.instance.device;
+    self.sensor = self.device.sensorFusion;
+    
+    self.modelView.texture = [GLImage imageNamed:self.device.texture];
+    self.modelView.backgroundColor = [UIColor colorWithRed:0.88 green:0.93 blue:0.96 alpha:1];
+    self.modelView.blendColor = [UIColor whiteColor];
+    self.modelView.modelTransform = [self createModelTransformWithRoll:0 yaw:0 pitch:0];
+    self.modelView.fov = -1.0f;
+    
+    GLLight *light = [[GLLight alloc] init];
+    light.transform = CATransform3DMakeTranslation(0.0f, 0.0f, -10.0f);
+    light.ambientColor = [UIColor colorWithWhite:0.50f alpha:1.0f];
+    self.modelView.lights = @[light];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        GLModel *model = [GLModel modelWithContentsOfFile:self.device.model];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.modelView.model = model;
+        });
+    });
+    
+    //
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -145,6 +169,44 @@
             break;
     }
 }
+
+
+//Natali added for model view
+- (CATransform3D) createModelTransformWithRoll:(float)roll yaw:(float)yaw pitch:(float)pitch {
+    // Scale model
+    CGFloat modelScale = 1.f;
+    switch (self.device.type) {
+        case DEVICE_TYPE_IOT_580:
+            modelScale = self.view.frame.size.height / 70;
+            break;
+        case DEVICE_TYPE_WEARABLE:
+            modelScale = self.view.frame.size.height / 130;
+            break;
+        case DEVICE_TYPE_IOT_585:
+            modelScale = self.view.frame.size.height / 14;
+            break;
+    }
+    CATransform3D transform = CATransform3DMakeScale(modelScale, -modelScale, modelScale);
+    
+    // Add roll, pitch, yaw.
+    transform = CATransform3DRotate(transform, roll, 1.0f, 0.0f, 0.0f);
+    transform = CATransform3DRotate(transform, yaw, 0.0f, 1.0f, 0.0f);
+    transform = CATransform3DRotate(transform, pitch, 0.0f, 0.0f, 1.0f);
+    
+    if (self.device.type == DEVICE_TYPE_IOT_580) {
+        // Apply transformations necessary for the object.
+        transform = CATransform3DRotate(transform, M_PI/2, 1.0f, 0.0f, 0.0f);
+        transform = CATransform3DRotate(transform, M_PI, 0.0f, 1.0f, 0.0f);
+        // Align object's center.
+        transform = CATransform3DTranslate(transform, 0, -12.0f, 0);
+    }
+    
+    return transform;
+}
+
+
+
+
 
 #pragma mark - Navigation
 

@@ -28,7 +28,7 @@
     YMKPlacemarkMapObject *placemark = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target];
     placemark.opacity = 0.5;
     placemark.draggable = true;
-    [placemark setIconWithImage:[UIImage imageNamed: @"icon-button-pressed"]];
+    [placemark setIconWithImage:[UIImage imageNamed: @"main-road"]];
     
 }
 

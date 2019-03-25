@@ -69,9 +69,12 @@ static NSArray* SENSOR_MENU_LAYOUT;
         return;
 
     SENSOR_MENU_LAYOUT = @[
+                           @{ @"title" : @"Датчики", @"view" : @"EnvironmentalSensorViewController" },
+                           @{ @"title" : @"IMU Датчики", @"view" : @"ImuSensorViewController" },
+                           ]; /*@[
             @{ @"title" : @"Environmental Sensors", @"view" : @"EnvironmentalSensorViewController" },
             @{ @"title" : @"IMU Sensors", @"view" : @"ImuSensorViewController" },
-    ];
+    ];*/
 }
 
 - (id)initWithDevice:(IotSensorsDevice *)device {

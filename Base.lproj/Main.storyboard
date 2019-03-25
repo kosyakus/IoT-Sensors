@@ -367,6 +367,39 @@
             </objects>
             <point key="canvasLocation" x="1435" y="2023"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="fuq-IT-ygo">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="ygV-QH-Sq1" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0cc-aF-8Z1"/>
+                        <viewControllerLayoutGuide type="bottom" id="PVU-jB-EIy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YQ2-9W-YbI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8M-bq-S3m" customClass="YMKMapView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r8M-bq-S3m" secondAttribute="trailing" id="ARU-zu-aiZ"/>
+                            <constraint firstItem="PVU-jB-EIy" firstAttribute="top" secondItem="r8M-bq-S3m" secondAttribute="bottom" id="Gab-Qv-RfH"/>
+                            <constraint firstItem="r8M-bq-S3m" firstAttribute="leading" secondItem="YQ2-9W-YbI" secondAttribute="leading" id="hoB-qS-HmU"/>
+                            <constraint firstItem="r8M-bq-S3m" firstAttribute="top" secondItem="0cc-aF-8Z1" secondAttribute="bottom" id="t3O-RW-gf5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="r8M-bq-S3m" id="Xht-Ji-2zH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mlK-0C-kng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="2122.826086956522"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="WZL-ap-KOM">
             <objects>

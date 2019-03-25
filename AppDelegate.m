@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "TemperatureSensor.h"
 #import <LoginWithAmazon/LoginWithAmazon.h>
+#import <YandexMapKit/YMKMapKitFactory.h>
 
 @interface AppDelegate ()
 
@@ -28,6 +29,9 @@
         [defaults setInteger:TEMPERATURE_UNIT_CELSIUS forKey:@"TemperatureUnit"];
     if (![defaults objectForKey:@"ShowCloudMenuOnScanScreen"])
         [defaults setBool:NO forKey:@"ShowCloudMenuOnScanScreen"];
+    
+    //Natali added for Yandex map
+    [YMKMapKit setApiKey: @"4ea80c68-a61a-4c33-a1b1-d8e4581725cf"];
 
     return YES;
 }

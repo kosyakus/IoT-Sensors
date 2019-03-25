@@ -83,7 +83,7 @@
 
                     case 2:
                         if (!self.fusion)
-                            self.fusion = [self.storyboard instantiateViewControllerWithIdentifier:@"SensorFusionViewController"];
+                            self.fusion = [self.storyboard instantiateViewControllerWithIdentifier: @"SensorFusionViewController"]; //@"MapViewController"];
                         vc = self.fusion;
                         break;
                 }

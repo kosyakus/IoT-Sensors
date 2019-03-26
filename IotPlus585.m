@@ -69,9 +69,12 @@ static NSArray* SENSOR_MENU_LAYOUT;
         return;
 
     SENSOR_MENU_LAYOUT = @[
+                           @{ @"title" : @"Датчики", @"view" : @"EnvironmentalSensorViewController" },
+                           @{ @"title" : @"IMU Датчики", @"view" : @"ImuSensorViewController" },
+                           ]; /*@[
             @{ @"title" : @"Environmental Sensors", @"view" : @"EnvironmentalSensorViewController" },
             @{ @"title" : @"IMU Sensors", @"view" : @"ImuSensorViewController" },
-    ];
+    ];*/
 }
 
 - (id)initWithDevice:(IotSensorsDevice *)device {
@@ -83,8 +86,8 @@ static NSArray* SENSOR_MENU_LAYOUT;
     self.isNewVersion = TRUE;
     self.cloudSupport = TRUE;
     self.sensorMenuLayout = SENSOR_MENU_LAYOUT;
-    self.model = @"iot585.obj";
-    self.texture = @"iot585_texture_mirror.png";
+    self.model = @"main_road.obj"; //@"iot585.obj";
+    self.texture = @"znak_SOKSurface_Color.png"; //@"iot585_texture_mirror.png";
 
     self.environmental = [[BME680 alloc] init];
     self.imu = [[ICM40605 alloc] init];

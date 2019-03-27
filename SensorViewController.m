@@ -192,7 +192,7 @@
             modelScale = self.view.frame.size.height / 130;
             break;
         case DEVICE_TYPE_IOT_585:
-            modelScale = self.view.frame.size.height / 14;
+            modelScale = self.view.frame.size.height / 1400;
             break;
     }
     CATransform3D transform = CATransform3DMakeScale(modelScale, -modelScale, modelScale);

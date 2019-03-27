@@ -13,10 +13,17 @@
 #import <CoreLocation/CoreLocation.h>
 #import "BluetoothManager.h"
 
-@interface DeviceTableViewController : UITableViewController <BluetoothManagerDelegate, CLLocationManagerDelegate>
+#import <YandexMapKit/YMKMapKitFactory.h>
+
+@interface DeviceTableViewController : UITableViewController <BluetoothManagerDelegate, CLLocationManagerDelegate, YMKMapObjectTapListener>
 
 @property IBOutlet UIBarButtonItem *cloudButton;
 @property NSMutableArray *devices;
 @property NSMutableArray *devicesInfo;
+
+//Natali added
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
+@property YMKMapView *mapView;
+//- (void) onMapObjectTap:(nonnull YMKMapObject *)mapObject style:(nonnull YMKPoint *)point;
 
 @end

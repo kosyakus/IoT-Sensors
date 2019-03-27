@@ -71,12 +71,84 @@
     assetTrackingEnabled = [[SettingsVault sharedSettingsVault] getConfigAssetTrackingEnable];
     if (assetTrackingEnabled && bluetoothManager.centralManager.state == CBCentralManagerStatePoweredOn)
         [self startAssetTracking];
+    
+    //Natali added for segment control
+    self.segmentControl.selectedSegmentIndex = 0;
+    [self.segmentControl addTarget:self action:@selector(onSegmentControlTap) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
+
+//Natali added for segment control
+
+-(void) onSegmentControlTap {
+    if (self.segmentControl.selectedSegmentIndex == 1) {
+        self.mapView = [[YMKMapView alloc] initWithFrame: CGRectMake(0, (self.segmentControl.frame.size.height), self.view.frame.size.width, (self.view.frame.size.height-self.segmentControl.frame.size.height))];
+        YMKPoint *target = [YMKPoint pointWithLatitude:55.677688 longitude:37.632798];
+        [self.mapView.mapWindow.map moveWithCameraPosition:[YMKCameraPosition cameraPositionWithTarget:target
+                                                                                                  zoom:30
+                                                                                               azimuth:0
+                                                                                                  tilt:0]];
+        YMKPlacemarkMapObject *placemark = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target];
+        placemark.opacity = 0.5;
+        placemark.draggable = true;
+        [placemark setIconWithImage:[UIImage imageNamed: @"main-road"]];
+        
+        [self.mapView.mapWindow.map.mapObjects addTapListenerWithTapListener: self];
+        [self.tableView addSubview:self.mapView];
+    } else {
+        [self.mapView removeFromSuperview];
+    }
+}
+
+/*- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.view.center = CGPointMake(self.view.frame.size.width/2, (self.view.frame.size.height/2- self.segmentControl.frame.size.height));
+    [scrollView bringSubviewToFront:self.view];
+}*/
+
+//- (void) onMapObjectTap:(YMKMapObject *)mapObject style:(YMKPoint *)point {
+- (BOOL)onMapObjectTapWithMapObject:(nonnull YMKMapObject *)mapObject
+                              point:(nonnull YMKPoint *)point {
+    [self stopScanning];
+    
+    if (connecting)
+        return false;
+    connecting = true;
+    
+    if (self.devices.count < 1)
+        return false;
+    
+    CBPeripheral *peripheral = self.devices[0];
+    NSMutableDictionary *info = self.devicesInfo[0];
+    bluetoothManager.device = [[IotSensorsDevice alloc] initWithPeripheral:peripheral type:[info[@"deviceType"] intValue] ekid:info[@"ekid"]];
+    [bluetoothManager.device connect];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = @"Connecting";
+    connectTimer = [NSTimer scheduledTimerWithTimeInterval:10
+                                                    target:self
+                                                  selector:@selector(connectionTimeout:)
+                                                  userInfo:nil
+                                                   repeats:NO];
+    
+    // Notify that a cloud-capable EK will connect
+    if (bluetoothManager.device.cloudSupport) {
+        [CloudManager sharedCloudManager];
+        if([[SettingsVault sharedSettingsVault] getConfigCloudEnable]) {
+            [[CloudManager sharedCloudManager] startCloudManager];
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationCloudCapableEKWillConnect object:info[@"ekid"] userInfo:nil];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowCloudMenuOnScanScreen"];
+    }
+    return true;
+}
+
+////////////////
 
 - (void) onCloudConfiguration:(NSNotification*)notification {
     ConfigurationMsg* msg = (ConfigurationMsg*) notification.object;
@@ -493,3 +565,5 @@
 }
 
 @end
+
+

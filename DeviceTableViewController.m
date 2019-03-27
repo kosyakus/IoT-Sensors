@@ -98,18 +98,29 @@
         [placemark setIconWithImage:[UIImage imageNamed: @"main-road"]];
         
         [self.mapView.mapWindow.map.mapObjects addTapListenerWithTapListener: self];
-        [self.view addSubview:self.mapView];
+        [self.tableView addSubview:self.mapView];
     } else {
         [self.mapView removeFromSuperview];
     }
 }
 
-- (void) onMapObjectTap:(YMKMapObject *)mapObject style:(YMKPoint *)point {
+/*- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.view.center = CGPointMake(self.view.frame.size.width/2, (self.view.frame.size.height/2- self.segmentControl.frame.size.height));
+    [scrollView bringSubviewToFront:self.view];
+}*/
+
+//- (void) onMapObjectTap:(YMKMapObject *)mapObject style:(YMKPoint *)point {
+- (BOOL)onMapObjectTapWithMapObject:(nonnull YMKMapObject *)mapObject
+                              point:(nonnull YMKPoint *)point {
     [self stopScanning];
     
     if (connecting)
-        return;
+        return false;
     connecting = true;
+    
+    if (self.devices.count < 1)
+        return false;
     
     CBPeripheral *peripheral = self.devices[0];
     NSMutableDictionary *info = self.devicesInfo[0];
@@ -134,6 +145,7 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationCloudCapableEKWillConnect object:info[@"ekid"] userInfo:nil];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"ShowCloudMenuOnScanScreen"];
     }
+    return true;
 }
 
 ////////////////

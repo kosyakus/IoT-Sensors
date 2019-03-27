@@ -88,14 +88,45 @@
     if (self.segmentControl.selectedSegmentIndex == 1) {
         self.mapView = [[YMKMapView alloc] initWithFrame: CGRectMake(0, (self.segmentControl.frame.size.height), self.view.frame.size.width, (self.view.frame.size.height-self.segmentControl.frame.size.height))];
         YMKPoint *target = [YMKPoint pointWithLatitude:55.677688 longitude:37.632798];
+        YMKPoint *target2 = [YMKPoint pointWithLatitude:55.676275 longitude:37.632636];
+        YMKPoint *target3 = [YMKPoint pointWithLatitude:55.676275 longitude:37.632636];
         [self.mapView.mapWindow.map moveWithCameraPosition:[YMKCameraPosition cameraPositionWithTarget:target
                                                                                                   zoom:30
                                                                                                azimuth:0
                                                                                                   tilt:0]];
-        YMKPlacemarkMapObject *placemark = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target];
+        switch (self.devices.count) {
+            case 0:
+                break;
+            case 1:
+                YMKPlacemarkMapObject *placemark = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target];
+                placemark.opacity = 0.5;
+                placemark.draggable = true;
+                [placemark setIconWithImage:[UIImage imageNamed: @"main-road"]];
+            case 2:
+                YMKPlacemarkMapObject *placemark2 = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target2];
+                placemark2.opacity = 0.5;
+                placemark2.draggable = true;
+                [placemark2 setIconWithImage:[UIImage imageNamed: @"main-road"]];
+            case 3:
+                YMKPlacemarkMapObject *placemark3 = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target3];
+                placemark3.opacity = 0.5;
+                placemark3.draggable = true;
+                [placemark3 setIconWithImage:[UIImage imageNamed: @"main-road"]];
+                break;
+            default:
+                break;
+        }
+        /*YMKPlacemarkMapObject *placemark = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target];
+        YMKPlacemarkMapObject *placemark2 = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target2];
         placemark.opacity = 0.5;
         placemark.draggable = true;
         [placemark setIconWithImage:[UIImage imageNamed: @"main-road"]];
+        placemark2.opacity = 0.5;
+        placemark2.draggable = true;
+        [placemark2 setIconWithImage:[UIImage imageNamed: @"main-road"]];
+        placemark3.opacity = 0.5;
+        placemark3.draggable = true;
+        [placemark3 setIconWithImage:[UIImage imageNamed: @"main-road"]];*/
         
         [self.mapView.mapWindow.map.mapObjects addTapListenerWithTapListener: self];
         [self.tableView addSubview:self.mapView];
@@ -119,11 +150,26 @@
         return false;
     connecting = true;
     
-    if (self.devices.count < 1)
-        return false;
+    switch (point.latitude) {
+        case 55.677688:
+            CBPeripheral *peripheral = self.devices[0];
+            NSMutableDictionary *info = self.devicesInfo[0];
+            break;
+        case 55.676275:
+            CBPeripheral *peripheral = self.devices[1];
+            NSMutableDictionary *info = self.devicesInfo[1];
+            break;
+        case 55.676275:
+            CBPeripheral *peripheral = self.devices[2];
+            NSMutableDictionary *info = self.devicesInfo[2];
+            break;
+        default:
+            return false;
+            break;
+    }
     
-    CBPeripheral *peripheral = self.devices[0];
-    NSMutableDictionary *info = self.devicesInfo[0];
+    //CBPeripheral *peripheral = self.devices[0];
+    //NSMutableDictionary *info = self.devicesInfo[0];
     bluetoothManager.device = [[IotSensorsDevice alloc] initWithPeripheral:peripheral type:[info[@"deviceType"] intValue] ekid:info[@"ekid"]];
     [bluetoothManager.device connect];
     

@@ -94,9 +94,9 @@
         YMKPoint *target3 = [YMKPoint pointWithLatitude:55.676282 longitude:37.632672];*/
         self.target = [YMKPoint pointWithLatitude:55.677688 longitude:37.632798];
         self.target2 = [YMKPoint pointWithLatitude:55.676275 longitude:37.632636];
-        self.target3 = [YMKPoint pointWithLatitude:55.676282 longitude:37.632672];
+        self.target3 = [YMKPoint pointWithLatitude:55.676455 longitude:37.633078];
         [self.mapView.mapWindow.map moveWithCameraPosition:[YMKCameraPosition cameraPositionWithTarget:_target
-                                                                                                  zoom:20
+                                                                                                  zoom:15
                                                                                                azimuth:0
                                                                                                   tilt:0]];
         for (int i=0; i<= 0; i++) {
@@ -153,10 +153,10 @@
     CBPeripheral *peripheral;
     NSMutableDictionary *info;
     
-    if (self.devices.count>0 && point == self.target) {
+    if (self.devices.count == 1) {
         peripheral = self.devices[0];
         info = self.devicesInfo[0];
-    } else if (self.devices.count>0 && point == self.target2) {
+    } else if (self.devices.count>0 && point.description == self.target2.description) {
         peripheral = self.devices[1];
         info = self.devicesInfo[1];
     } else if (self.devices.count>0 && point == self.target3) {

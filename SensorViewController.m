@@ -191,7 +191,7 @@
     CGFloat modelScale = 1.f;
     switch (self.device.type) {
         case DEVICE_TYPE_IOT_580:
-            modelScale = self.view.frame.size.height / 70;
+            modelScale = self.view.frame.size.height / 600;
             break;
         case DEVICE_TYPE_WEARABLE:
             modelScale = self.view.frame.size.height / 130;

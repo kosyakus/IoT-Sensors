@@ -47,8 +47,8 @@
 
     self.deviceType = DEVICE_TYPE_IOT_580;
     self.cloudSupport = FALSE;
-    self.model = @"DIAGR_DW_Final_Dcase.obj";
-    self.texture = @"pattern.png";
+    self.model = @"give_way_znak_0003.obj"; //@"DIAGR_DW_Final_Dcase.obj";
+    self.texture = @"Give_waySurface_Color.png"; //@"pattern.png";
 
     self.environmental = [[BME280 alloc] init];
     self.imu = [[BMI160 alloc] init];

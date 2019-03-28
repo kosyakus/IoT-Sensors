@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="1630" y="448"/>
         </scene>
-        <!--Dialog Semiconductor - IoT Sensors-->
+        <!--Дорожные знаки-->
         <scene sceneID="Iv6-uJ-Kgv">
             <objects>
                 <tableViewController id="2LN-ds-kMD" customClass="DeviceTableViewController" sceneMemberID="viewController">
@@ -157,14 +157,14 @@
                             <outlet property="delegate" destination="2LN-ds-kMD" id="YhK-eK-Rcu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Dialog Semiconductor - IoT Sensors" id="LQi-6j-T6n">
+                    <navigationItem key="navigationItem" title="Дорожные знаки" id="LQi-6j-T6n">
                         <barButtonItem key="backBarButtonItem" title="Devices" id="MHQ-bQ-uUw"/>
-                        <barButtonItem key="leftBarButtonItem" image="icon-cloud" id="k3M-Ra-Bin">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" id="k3M-Ra-Bin">
                             <connections>
                                 <segue destination="HPS-fT-apG" kind="show" id="l7U-n4-srC"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="icon-info" id="zFq-eK-RCD">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" image="icon-info" id="zFq-eK-RCD">
                             <connections>
                                 <segue destination="90h-th-15W" kind="show" id="ynZ-a7-orr"/>
                             </connections>
@@ -1731,12 +1731,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="IoT Sensors" id="V5a-TE-NKV">
                         <barButtonItem key="backBarButtonItem" title="Back" id="0tC-UU-0E7"/>
-                        <barButtonItem key="leftBarButtonItem" image="ic_menu_white" id="67U-Lr-Q3A">
+                        <barButtonItem key="leftBarButtonItem" title="Отключить" id="67U-Lr-Q3A">
                             <connections>
                                 <action selector="onShowMenu:" destination="cR8-yA-yPi" id="2Ga-2D-gKC"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Stop" id="b5B-MZ-faf">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="b5B-MZ-faf">
                             <connections>
                                 <action selector="onSensorToggleButton:" destination="cR8-yA-yPi" id="9Ca-Km-W3O"/>
                             </connections>
@@ -4834,7 +4834,7 @@
                         <viewControllerLayoutGuide type="bottom" id="06i-fu-PMH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RKN-k6-cZC">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-a1-kBo" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
@@ -5056,7 +5056,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3b-cP-RH9" customClass="GLModelView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="310"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtH-Hp-Sbs">
                                                 <rect key="frame" x="356" y="658" width="50" height="50"/>
@@ -5082,13 +5082,13 @@
                                         <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="600" id="Ncw-MS-NTD"/>
-                                            <constraint firstAttribute="height" constant="310" id="Xd0-IO-h1E"/>
+                                            <constraint firstAttribute="width" secondItem="W3b-cP-RH9" secondAttribute="height" multiplier="1:1" id="Uce-2z-4wX"/>
                                             <constraint firstItem="wtH-Hp-Sbs" firstAttribute="leading" secondItem="W3b-cP-RH9" secondAttribute="leading" constant="356" id="mkp-fQ-6pY"/>
                                             <constraint firstItem="wtH-Hp-Sbs" firstAttribute="top" secondItem="W3b-cP-RH9" secondAttribute="top" constant="658" id="pIF-2A-NUh"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aUc-Pb-Hwu">
-                                        <rect key="frame" x="0.0" y="310" width="600" height="580"/>
+                                        <rect key="frame" x="0.0" y="600" width="600" height="580"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="x62-Xp-k8k">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="580"/>
@@ -5100,7 +5100,7 @@
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-dj-fsj">
-                                                        <rect key="frame" x="0.0" y="193.33333333333331" width="300" height="193.33333333333331"/>
+                                                        <rect key="frame" x="0.0" y="193.33333333333337" width="300" height="193.33333333333337"/>
                                                         <connections>
                                                             <segue destination="WZK-No-gUe" kind="embed" identifier="sensorHumidity" id="J4s-Yp-05i"/>
                                                         </connections>
@@ -5149,7 +5149,7 @@
                                 <constraints>
                                     <constraint firstItem="aUc-Pb-Hwu" firstAttribute="trailing" secondItem="W3b-cP-RH9" secondAttribute="trailing" id="0Rs-UN-mCa"/>
                                     <constraint firstItem="aUc-Pb-Hwu" firstAttribute="leading" secondItem="uaY-aU-uwK" secondAttribute="leading" id="7W6-PA-dpm"/>
-                                    <constraint firstItem="aUc-Pb-Hwu" firstAttribute="top" secondItem="uaY-aU-uwK" secondAttribute="top" constant="310" id="8BQ-zh-ZX5"/>
+                                    <constraint firstItem="aUc-Pb-Hwu" firstAttribute="top" secondItem="W3b-cP-RH9" secondAttribute="bottom" id="85Q-MW-Ua7"/>
                                     <constraint firstItem="aUc-Pb-Hwu" firstAttribute="width" secondItem="uaY-aU-uwK" secondAttribute="width" id="OAJ-ED-j6E"/>
                                     <constraint firstItem="W3b-cP-RH9" firstAttribute="leading" secondItem="uaY-aU-uwK" secondAttribute="leading" id="PgO-Uh-eiA"/>
                                     <constraint firstItem="W3b-cP-RH9" firstAttribute="top" secondItem="uaY-aU-uwK" secondAttribute="top" id="R8v-lG-wQv"/>
@@ -5799,7 +5799,6 @@
         <image name="icon-air-quality" width="48" height="48"/>
         <image name="icon-ambient-light" width="48" height="48"/>
         <image name="icon-battery-warning" width="48" height="48"/>
-        <image name="icon-cloud" width="36" height="36"/>
         <image name="icon-cloud-alerting" width="36" height="36"/>
         <image name="icon-cloud-alexa" width="36" height="36"/>
         <image name="icon-cloud-asset-tracking" width="36" height="36"/>

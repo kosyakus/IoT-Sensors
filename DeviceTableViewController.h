@@ -24,6 +24,9 @@
 //Natali added
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 @property YMKMapView *mapView;
+@property YMKPoint *target;
+@property YMKPoint *target2;
+@property YMKPoint *target3; 
 //- (void) onMapObjectTap:(nonnull YMKMapObject *)mapObject style:(nonnull YMKPoint *)point;
 
 @end

@@ -103,12 +103,12 @@ static CGFloat kAPLSlideMenuFirstOffset = 4.0;
     [super viewDidLoad];
     
     //Create GestureRecognizers for NavigationView
-    UIPanGestureRecognizer *panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragGestureRecognizerDrag:)];
+    /*UIPanGestureRecognizer *panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragGestureRecognizerDrag:)];
     panGR.delegate = self;
     panGR.minimumNumberOfTouches = 1;
     panGR.maximumNumberOfTouches = 1;
     self.dragGestureRecognizer = panGR;
-    [self.view addGestureRecognizer:panGR];
+    [self.view addGestureRecognizer:panGR];*/
     
     UIView *contentContainer = [[UIView alloc] initWithFrame:self.view.bounds];
     contentContainer.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

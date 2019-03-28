@@ -25,15 +25,20 @@
     self.device = BluetoothManager.instance.device;
     //self.view.frame = [[UIScreen mainScreen] bounds]; //Natali added
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 2000); //CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+300)
+    self.sensorToggleButton.enabled = false;
+    self.sensorToggleButton.title = @"";
+    self.navigationItem.leftBarButtonItem.title = @"Отключить";
+    [self.navigationItem.leftBarButtonItem setImage:nil];
+    self.navigationItem.title = @"Дорожный знак";
 
-    NSMutableArray *toolbarButtons = [self.navigationItem.rightBarButtonItems mutableCopy];
-    [self.navigationItem setRightBarButtonItems:toolbarButtons animated:NO];
+    //NSMutableArray *toolbarButtons = [self.navigationItem.rightBarButtonItems mutableCopy];
+    //[self.navigationItem setRightBarButtonItems:toolbarButtons animated:NO];
     self.sensorViewMagnetometer.imageViewCalibrated.hidden = YES;
     self.sensorViewMagnetometer.imageViewWarning.hidden = YES;
     self.buttonOverlay.tintColor = UIColorWithRGB(0x1E88E5);
     self.buttonOverlayView.hidden = YES;
     
-    //Natali addede for model
+    //Natali added for model
     self.device = BluetoothManager.instance.device;
     self.sensor = self.device.sensorFusion;
     
@@ -60,7 +65,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.sensorToggleButton.title = self.device.isStarted ? @"Stop" : @"Start";
+    //self.sensorToggleButton.title = self.device.isStarted ? @"Stop" : @"Start";
     self.buttonOverlayView.hidden = !self.device.buttonSensor.isPressed;
     self.magnetoStateOverlayView.hidden = YES;
     calibrationState = -1;
@@ -135,7 +140,7 @@
 
 - (void) didUpdateSensorState:(NSNotification*)notification {
     BOOL sensorState = [notification.object boolValue];
-    self.sensorToggleButton.title = sensorState ? @"Stop" : @"Start";
+    //self.sensorToggleButton.title = sensorState ? @"Stop" : @"Start";
 }
 
 - (void) onConfigurationReport:(NSNotification*)notification {
@@ -224,7 +229,7 @@
 
 - (void) didUpdateSensorState1:(NSNotification*)notification {
     BOOL sensorState = [notification.object boolValue];
-    self.sensorToggleButton.title = sensorState ? @"Stop" : @"Start";
+    //self.sensorToggleButton.title = sensorState ? @"Stop" : @"Start";
 }
 
 - (void)didUpdateMagnetometerState1:(NSNotification*)notification {
@@ -298,8 +303,12 @@
     }
 }
 
-- (IBAction)onShowMenu:(id)sender {
+/*- (IBAction)onShowMenu:(id)sender {
     [self.slideMenuController showLeftMenu:YES];
+}*/
+
+- (IBAction)onShowMenu:(id)sender {
+    [self.device disconnect];
 }
 
 @end

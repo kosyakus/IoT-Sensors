@@ -99,19 +99,54 @@
                                                                                                   zoom:15
                                                                                                azimuth:0
                                                                                                   tilt:0]];
-        for (int i=0; i<= 0; i++) {
-            if (self.devices.count == 1) {
+        if (self.devices.count == 1) {
+            CBPeripheral *peripheral = self.devices[0];
+            NSMutableDictionary *info = self.devicesInfo[0];
+            NSString* name = info[CBAdvertisementDataLocalNameKey];
+            if (!name)
+                name = peripheral.name;
+            int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
+            if (type == DEVICE_TYPE_IOT_585) {
                 [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-            } else if (self.devices.count == 2) {
-                [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-                [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
-            } else if (self.devices.count == 3) {
-                [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-                [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
-                [self createPlaceMarkWithTarget:_target3 andIcon:@"main-road"];
             } else {
-                break;
+                [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
             }
+            
+        } else if (self.devices.count == 2) {
+            for (int i=0; i<2; i++) {
+                CBPeripheral *peripheral = self.devices[i];
+                NSMutableDictionary *info = self.devicesInfo[i];
+                NSString* name = info[CBAdvertisementDataLocalNameKey];
+                if (!name)
+                    name = peripheral.name;
+                int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
+                if (type == DEVICE_TYPE_IOT_585) {
+                    [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+                    [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
+                } else {
+                    [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
+                }
+            }
+            //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+            //[self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
+        } else if (self.devices.count == 3) {
+            for (int i=0; i<3; i++) {
+                CBPeripheral *peripheral = self.devices[i];
+                NSMutableDictionary *info = self.devicesInfo[i];
+                NSString* name = info[CBAdvertisementDataLocalNameKey];
+                if (!name)
+                    name = peripheral.name;
+                int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
+                if (type == DEVICE_TYPE_IOT_585) {
+                    [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+                    [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
+                } else {
+                    [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
+                }
+            }
+            //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+            //[self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
+            //[self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
         }
         
         
@@ -156,7 +191,7 @@
     if (self.devices.count == 1) {
         peripheral = self.devices[0];
         info = self.devicesInfo[0];
-    } else if (self.devices.count>0 && point.description == self.target2.description) {
+    } else if (self.devices.count == 2) {
         peripheral = self.devices[1];
         info = self.devicesInfo[1];
     } else if (self.devices.count>0 && point == self.target3) {
@@ -563,9 +598,18 @@
 
     info[@"deviceType"] = @(type);
     info[@"ekid"] = ekid;
-    cell.deviceNameLabel.text = @"Главная дорога"; //[IotDeviceSpec getProperNameFromAdvName:name];
-    cell.deviceImageView.image = [UIImage imageNamed: @"mainRoad.png"]; //[UIImage imageNamed:icon];
-    cell.versionLabel.text = @"Дорожный знак №2.1"; //[NSString stringWithFormat:@"Software: %@", mode];
+    //cell.deviceNameLabel.text = [IotDeviceSpec getProperNameFromAdvName:name];
+    if (type == DEVICE_TYPE_IOT_585) {
+        cell.deviceNameLabel.text = @"Главная дорога";
+        cell.deviceImageView.image = [UIImage imageNamed: @"mainRoad.png"];
+        cell.versionLabel.text = @"Дорожный знак №2.1";
+    } else {
+        cell.deviceNameLabel.text = @"Уступи дорогу";
+        cell.deviceImageView.image = [UIImage imageNamed: @"giveWay.png"];
+        cell.versionLabel.text = @"Дорожный знак №2.4";
+    }
+    //cell.deviceImageView.image = [UIImage imageNamed:icon];
+    //cell.versionLabel.text = [NSString stringWithFormat:@"Software: %@", mode];
     cell.addressLabel.text = @""; //[NSString stringWithFormat:@"BDA: %@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
 
     if (info[@"RSSI"]) {

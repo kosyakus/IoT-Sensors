@@ -26,7 +26,8 @@
 @property YMKMapView *mapView;
 @property YMKPoint *target;
 @property YMKPoint *target2;
-@property YMKPoint *target3; 
+@property YMKPoint *target3;
+@property NSMutableArray *placemarks;
 //- (void) onMapObjectTap:(nonnull YMKMapObject *)mapObject style:(nonnull YMKPoint *)point;
 
 @end

@@ -93,7 +93,7 @@
         YMKPoint *target2 = [YMKPoint pointWithLatitude:55.676275 longitude:37.632636];
         YMKPoint *target3 = [YMKPoint pointWithLatitude:55.676282 longitude:37.632672];*/
         self.target = [YMKPoint pointWithLatitude:55.677688 longitude:37.632798];
-        self.target2 = [YMKPoint pointWithLatitude:55.676275 longitude:37.632636];
+        self.target2 = [YMKPoint pointWithLatitude:55.680457 longitude:37.633108];
         self.target3 = [YMKPoint pointWithLatitude:55.676455 longitude:37.633078];
         [self.mapView.mapWindow.map moveWithCameraPosition:[YMKCameraPosition cameraPositionWithTarget:_target
                                                                                                   zoom:15
@@ -128,8 +128,8 @@
                 }
             }*/
             [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-            [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
-        } else if (self.devices.count == 3) {
+            [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-main-road"];
+        } /*else if (self.devices.count == 3) {
             for (int i=0; i<3; i++) {
                 CBPeripheral *peripheral = self.devices[i];
                 NSMutableDictionary *info = self.devicesInfo[i];
@@ -147,7 +147,7 @@
             //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
             //[self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
             //[self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
-        }
+        }*/
         
         
         /*YMKPlacemarkMapObject *placemark = [self.mapView.mapWindow.map.mapObjects addPlacemarkWithPoint: target];
@@ -168,6 +168,7 @@
     placemark.opacity = 0.5;
     placemark.draggable = true;
     [placemark setIconWithImage:[UIImage imageNamed: icon]];
+    [self.placemarks addObject:placemark];
 }
 
 /*- (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -188,13 +189,39 @@
     CBPeripheral *peripheral;
     NSMutableDictionary *info;
     
+    //guard let placemark = mapObject as? YMKPlacemarkMapObject else { return false }
+    //YMKPlacemarkMapObject *place = (YMKPlacemarkMapObject *)(mapObject);
+    
     if (self.devices.count == 1) {
         peripheral = self.devices[0];
         info = self.devicesInfo[0];
     } else if (self.devices.count == 2) {
+        for (int i=0; i<2; i++) {
+            /*YMKPlacemarkMapObject *choosedPlace = self.placemarks[i];
+            if (mapObject == choosedPlace) {
+                peripheral = self.devices[1];
+                info = self.devicesInfo[1];
+            }
+            if (choosedPlace.geometry == place.geometry) {
+                peripheral = self.devices[1];
+                info = self.devicesInfo[1];
+            }
+            if (point == self.target2) {
+                peripheral = self.devices[1];
+                info = self.devicesInfo[1];
+            }*/
+            if (point.latitude < 55.680) {
+                peripheral = self.devices[0];
+                info = self.devicesInfo[0];
+            } else {
+                peripheral = self.devices[1];
+                info = self.devicesInfo[1];
+            }
+        }
         //YMKMapObject *object = self.mapView.mapWindow.map.mapObjects[0];
-        peripheral = self.devices[1];
-        info = self.devicesInfo[1];
+        //[self.mapView.mapWindow.map.mapObjects traverseWithMapObjectVisitor:mapObject];
+        //peripheral = self.devices[1];
+        //info = self.devicesInfo[1];
     } else if (self.devices.count>0 && point == self.target3) {
         peripheral = self.devices[2];
         info = self.devicesInfo[2];

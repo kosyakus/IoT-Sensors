@@ -113,7 +113,7 @@
             }
             
         } else if (self.devices.count == 2) {
-            for (int i=0; i<2; i++) {
+            /*for (int i=0; i<2; i++) {
                 CBPeripheral *peripheral = self.devices[i];
                 NSMutableDictionary *info = self.devicesInfo[i];
                 NSString* name = info[CBAdvertisementDataLocalNameKey];
@@ -126,9 +126,9 @@
                 } else {
                     [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
                 }
-            }
-            //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-            //[self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
+            }*/
+            [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+            [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
         } else if (self.devices.count == 3) {
             for (int i=0; i<3; i++) {
                 CBPeripheral *peripheral = self.devices[i];
@@ -192,6 +192,7 @@
         peripheral = self.devices[0];
         info = self.devicesInfo[0];
     } else if (self.devices.count == 2) {
+        //YMKMapObject *object = self.mapView.mapWindow.map.mapObjects[0];
         peripheral = self.devices[1];
         info = self.devicesInfo[1];
     } else if (self.devices.count>0 && point == self.target3) {

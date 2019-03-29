@@ -188,16 +188,21 @@
 //Natali added for model view
 - (CATransform3D) createModelTransformWithRoll:(float)roll yaw:(float)yaw pitch:(float)pitch {
     // Scale model
+    NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
     CGFloat modelScale = 1.f;
     switch (self.device.type) {
         case DEVICE_TYPE_IOT_580:
-            modelScale = self.view.frame.size.height / 600;
+            modelScale = self.view.frame.size.height / 700;
             break;
         case DEVICE_TYPE_WEARABLE:
             modelScale = self.view.frame.size.height / 130;
             break;
         case DEVICE_TYPE_IOT_585:
-            modelScale = self.view.frame.size.height / 1400;
+            if ([self.device.peripheral.identifier isEqual: arr]) {
+                modelScale = self.view.frame.size.height / 1400;
+            } else {
+                modelScale = self.view.frame.size.height / 500;
+            }
             break;
     }
     CATransform3D transform = CATransform3DMakeScale(modelScale, -modelScale, modelScale);

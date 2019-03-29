@@ -106,29 +106,38 @@
             if (!name)
                 name = peripheral.name;
             int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
-            if (type == DEVICE_TYPE_IOT_585) {
+            NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
+            if ([peripheral.identifier isEqual: arr]) {
                 [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+            /*if (type == DEVICE_TYPE_IOT_585) {
+                [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];*/
             } else {
-                [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
+                [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
             }
             
         } else if (self.devices.count == 2) {
-            /*for (int i=0; i<2; i++) {
+            for (int i=0; i<2; i++) {
                 CBPeripheral *peripheral = self.devices[i];
                 NSMutableDictionary *info = self.devicesInfo[i];
                 NSString* name = info[CBAdvertisementDataLocalNameKey];
                 if (!name)
                     name = peripheral.name;
                 int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
-                if (type == DEVICE_TYPE_IOT_585) {
+                NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
+                if ([peripheral.identifier isEqual: arr]) {
+                    [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+                } else {
+                    [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
+                }
+                /*if (type == DEVICE_TYPE_IOT_585) {
                     [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
                     [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
                 } else {
                     [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
-                }
-            }*/
-            [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-            [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-main-road"];
+                }*/
+            }
+            //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+            //[self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
         } /*else if (self.devices.count == 3) {
             for (int i=0; i<3; i++) {
                 CBPeripheral *peripheral = self.devices[i];
@@ -160,6 +169,9 @@
         [self.tableView addSubview:self.mapView];
     } else {
         [self.mapView removeFromSuperview];
+        for (int i=0; i<self.placemarks.count; i++) {
+            [self.mapView.mapWindow.map.mapObjects removeWithMapObject:self.placemarks[i]];
+        }
     }
 }
 
@@ -596,6 +608,8 @@
     
     CBPeripheral *peripheral = self.devices[indexPath.row];
     NSMutableDictionary *info = self.devicesInfo[indexPath.row];
+    NSLog(@"peripheral %@", peripheral);
+    NSLog(@"info %@", info);
 
     NSString* name = info[CBAdvertisementDataLocalNameKey];
     if (!name)
@@ -626,8 +640,11 @@
 
     info[@"deviceType"] = @(type);
     info[@"ekid"] = ekid;
-    //cell.deviceNameLabel.text = [IotDeviceSpec getProperNameFromAdvName:name];
-    if (type == DEVICE_TYPE_IOT_585) {
+    //
+    NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
+    NSLog(@"peripheral %@", peripheral.identifier);
+    NSLog(@"arrr %@", arr);
+    if ([peripheral.identifier isEqual: arr]) {
         cell.deviceNameLabel.text = @"Главная дорога";
         cell.deviceImageView.image = [UIImage imageNamed: @"mainRoad.png"];
         cell.versionLabel.text = @"Дорожный знак №2.1";
@@ -636,6 +653,7 @@
         cell.deviceImageView.image = [UIImage imageNamed: @"giveWay.png"];
         cell.versionLabel.text = @"Дорожный знак №2.4";
     }
+    //cell.deviceNameLabel.text = [IotDeviceSpec getProperNameFromAdvName:name];
     //cell.deviceImageView.image = [UIImage imageNamed:icon];
     //cell.versionLabel.text = [NSString stringWithFormat:@"Software: %@", mode];
     cell.addressLabel.text = @""; //[NSString stringWithFormat:@"BDA: %@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];

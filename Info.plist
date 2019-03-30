@@ -39,11 +39,11 @@
 	<true/>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Required in order to connect to Dialog IoT Sensor peripherals.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Required in order to track iBeacon assets.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Required in order to track iBeacon assets.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Required in order to track iBeacon assets.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Required in order to record voice commands for Amazon Alexa communication.</string>

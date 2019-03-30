@@ -89,8 +89,8 @@ static NSArray* SENSOR_MENU_LAYOUT;
     //Natali changed
     NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
     if ([self.device.peripheral.identifier isEqual: arr]) {
-        self.model = @"main_road.obj"; //@"iot585.obj";
-        self.texture = @"znak_SOKSurface_Color.png"; //@"iot585_texture_mirror.png";
+        self.model = @"Turn_left.obj"; //@"iot585.obj";
+        self.texture = @"CylinderSurface_Color.png"; //@"iot585_texture_mirror.png";
     } else {
         self.model = @"give_way_znak_0003.obj"; //@"iot585.obj";
         self.texture = @"Give_waySurface_Color.png"; //@"iot585_texture_mirror.png";

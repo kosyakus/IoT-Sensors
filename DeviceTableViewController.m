@@ -108,7 +108,8 @@
             int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
             NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
             if ([peripheral.identifier isEqual: arr]) {
-                [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+                [self createPlaceMarkWithTarget:_target andIcon:@"icon-turn-left"];
+                //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
             /*if (type == DEVICE_TYPE_IOT_585) {
                 [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];*/
             } else {
@@ -125,7 +126,8 @@
                 int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
                 NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
                 if ([peripheral.identifier isEqual: arr]) {
-                    [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
+                    [self createPlaceMarkWithTarget:_target andIcon:@"icon-turn-left"];
+                    //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
                 } else {
                     [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
                 }
@@ -645,9 +647,9 @@
     NSLog(@"peripheral %@", peripheral.identifier);
     NSLog(@"arrr %@", arr);
     if ([peripheral.identifier isEqual: arr]) {
-        cell.deviceNameLabel.text = @"Главная дорога";
-        cell.deviceImageView.image = [UIImage imageNamed: @"mainRoad.png"];
-        cell.versionLabel.text = @"Дорожный знак №2.1";
+        cell.deviceNameLabel.text = @"Движение налево"; //@"Главная дорога";
+        cell.deviceImageView.image = [UIImage imageNamed: @"turnLeft.png"]; //[UIImage imageNamed: @"mainRoad.png"];
+        cell.versionLabel.text = @"Дорожный знак №4.1.3"; //@"Дорожный знак №2.1";
     } else {
         cell.deviceNameLabel.text = @"Уступи дорогу";
         cell.deviceImageView.image = [UIImage imageNamed: @"giveWay.png"];

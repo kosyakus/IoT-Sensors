@@ -199,7 +199,7 @@
             break;
         case DEVICE_TYPE_IOT_585:
             if ([self.device.peripheral.identifier isEqual: arr]) {
-                modelScale = self.view.frame.size.height / 1400;
+                modelScale = self.view.frame.size.height / 300;
             } else {
                 modelScale = self.view.frame.size.height / 500;
             }

@@ -100,46 +100,37 @@
                                                                                                azimuth:0
                                                                                                   tilt:0]];
         if (self.devices.count == 1) {
-            CBPeripheral *peripheral = self.devices[0];
+            //CBPeripheral *peripheral = self.devices[0];
             NSMutableDictionary *info = self.devicesInfo[0];
-            NSString* name = info[CBAdvertisementDataLocalNameKey];
-            if (!name)
-                name = peripheral.name;
-            int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
-            NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
-            if ([peripheral.identifier isEqual: arr]) {
+            
+            NSData* data = info[CBAdvertisementDataManufacturerDataKey];
+            NSLog(@"Data %@", data); //80eaca70 a5d502
+            NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+            NSLog(@"Arr %@", arr);
+            //NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
+            if ([arr isEqual: @"<70a5d5>"]) {
                 [self createPlaceMarkWithTarget:_target andIcon:@"icon-turn-left"];
-                //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-            /*if (type == DEVICE_TYPE_IOT_585) {
-                [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];*/
+                
             } else {
                 [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
             }
             
         } else if (self.devices.count == 2) {
             for (int i=0; i<2; i++) {
-                CBPeripheral *peripheral = self.devices[i];
                 NSMutableDictionary *info = self.devicesInfo[i];
-                NSString* name = info[CBAdvertisementDataLocalNameKey];
-                if (!name)
-                    name = peripheral.name;
-                int type = [IotDeviceSpec getDeviceTypeFromAdvName:name];
-                NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
-                if ([peripheral.identifier isEqual: arr]) {
+                
+                NSData* data = info[CBAdvertisementDataManufacturerDataKey];
+                NSLog(@"Data %@", data); //80eaca70 a5d502
+                NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+                NSLog(@"Arr %@", arr);
+                if ([arr isEqual: @"<70a5d5>"]) {
                     [self createPlaceMarkWithTarget:_target andIcon:@"icon-turn-left"];
-                    //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
                 } else {
                     [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
                 }
-                /*if (type == DEVICE_TYPE_IOT_585) {
-                    [self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-                    [self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
-                } else {
-                    [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
-                }*/
+                
             }
-            //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-            //[self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
+            
         } /*else if (self.devices.count == 3) {
             for (int i=0; i<3; i++) {
                 CBPeripheral *peripheral = self.devices[i];
@@ -155,9 +146,7 @@
                     [self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
                 }
             }
-            //[self createPlaceMarkWithTarget:_target andIcon:@"main-road"];
-            //[self createPlaceMarkWithTarget:_target2 andIcon:@"main-road"];
-            //[self createPlaceMarkWithTarget:_target3 andIcon:@"icon-give-way"];
+            
         }*/
         
         
@@ -204,38 +193,64 @@
     NSMutableDictionary *info;
     
     //guard let placemark = mapObject as? YMKPlacemarkMapObject else { return false }
-    //YMKPlacemarkMapObject *place = (YMKPlacemarkMapObject *)(mapObject);
+    YMKPlacemarkMapObject *place = (YMKPlacemarkMapObject *)(mapObject);
+    if (!place.geometry) {
+        NSLog(@"FAIL");
+        return false;
+    }
+    
+    
     
     if (self.devices.count == 1) {
         peripheral = self.devices[0];
         info = self.devicesInfo[0];
     } else if (self.devices.count == 2) {
         for (int i=0; i<2; i++) {
-            /*YMKPlacemarkMapObject *choosedPlace = self.placemarks[i];
-            if (mapObject == choosedPlace) {
-                peripheral = self.devices[1];
-                info = self.devicesInfo[1];
+            YMKPlacemarkMapObject *choosedPlace = self.placemarks[i];
+            
+            
+            NSLog(@"%f %f", place.geometry.latitude, place.geometry.longitude);
+            NSLog(@"%f %f", choosedPlace.geometry.latitude, choosedPlace.geometry.longitude);
+            if (self.target.latitude == place.geometry.latitude) {
+                
+                peripheral = self.devices[0];
+                info = self.devicesInfo[0];
+                NSData* data = info[CBAdvertisementDataManufacturerDataKey];
+                NSLog(@"Data %@", data); //80eaca70 a5d502
+                NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+                NSLog(@"Arr %@", arr);
+                if ([arr isEqual: @"<70a5d5>"]) {
+                } else {
+                    peripheral = self.devices[1];
+                    info = self.devicesInfo[1];
+                }
+                
+            } else {
+                peripheral = self.devices[0];
+                info = self.devicesInfo[0];
+                NSData* data = info[CBAdvertisementDataManufacturerDataKey];
+                NSLog(@"Data %@", data); //80eaca70 a5d502
+                NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+                NSLog(@"Arr %@", arr);
+                if ([arr isEqual: @"<70a5d5>"]) {
+                    peripheral = self.devices[1];
+                    info = self.devicesInfo[1];
+                } else {
+                    
+                }
             }
-            if (choosedPlace.geometry == place.geometry) {
-                peripheral = self.devices[1];
-                info = self.devicesInfo[1];
-            }
-            if (point == self.target2) {
-                peripheral = self.devices[1];
-                info = self.devicesInfo[1];
-            }*/
+            
+            
+            /*
             if (point.latitude < 55.680) {
                 peripheral = self.devices[0];
                 info = self.devicesInfo[0];
             } else {
                 peripheral = self.devices[1];
                 info = self.devicesInfo[1];
-            }
+            }*/
         }
-        //YMKMapObject *object = self.mapView.mapWindow.map.mapObjects[0];
-        //[self.mapView.mapWindow.map.mapObjects traverseWithMapObjectVisitor:mapObject];
-        //peripheral = self.devices[1];
-        //info = self.devicesInfo[1];
+        
     } else if (self.devices.count>0 && point == self.target3) {
         peripheral = self.devices[2];
         info = self.devicesInfo[2];
@@ -246,8 +261,25 @@
     
     //CBPeripheral *peripheral = self.devices[0];
     //NSMutableDictionary *info = self.devicesInfo[0];
+    
     bluetoothManager.device = [[IotSensorsDevice alloc] initWithPeripheral:peripheral type:[info[@"deviceType"] intValue] ekid:info[@"ekid"]];
     [bluetoothManager.device connect];
+    
+    //Natali added
+    NSData* data = info[CBAdvertisementDataManufacturerDataKey];
+    NSLog(@"Data %@", data); //80eaca70 a5d502
+    NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+    NSLog(@"Arr %@", arr);
+    if ([arr isEqual: @"<70a5d5>"]) {
+        bluetoothManager.device.model = @"Turn_left.obj"; //@"iot585.obj";
+        bluetoothManager.device.texture = @"CylinderSurface_Color.png"; //@"iot585_texture_mirror.png";
+    } else {
+        bluetoothManager.device.model = @"give_way_znak_0003.obj";
+        bluetoothManager.device.texture = @"Give_waySurface_Color.png";
+    }
+    //
+    
+    
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -610,8 +642,8 @@
     
     CBPeripheral *peripheral = self.devices[indexPath.row];
     NSMutableDictionary *info = self.devicesInfo[indexPath.row];
-    NSLog(@"peripheral %@", peripheral);
-    NSLog(@"info %@", info);
+    //NSLog(@"peripheral %@", peripheral);
+    //NSLog(@"info %@", info);
 
     NSString* name = info[CBAdvertisementDataLocalNameKey];
     if (!name)
@@ -643,10 +675,8 @@
     info[@"deviceType"] = @(type);
     info[@"ekid"] = ekid;
     //
-    NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
-    NSLog(@"peripheral %@", peripheral.identifier);
-    NSLog(@"arrr %@", arr);
-    if ([peripheral.identifier isEqual: arr]) {
+    NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+    if ([arr isEqual: @"<70a5d5>"]) {
         cell.deviceNameLabel.text = @"Движение налево"; //@"Главная дорога";
         cell.deviceImageView.image = [UIImage imageNamed: @"turnLeft.png"]; //[UIImage imageNamed: @"mainRoad.png"];
         cell.versionLabel.text = @"Дорожный знак №4.1.3"; //@"Дорожный знак №2.1";
@@ -680,6 +710,20 @@
     NSMutableDictionary *info = self.devicesInfo[indexPath.row];
     bluetoothManager.device = [[IotSensorsDevice alloc] initWithPeripheral:peripheral type:[info[@"deviceType"] intValue] ekid:info[@"ekid"]];
     [bluetoothManager.device connect];
+    
+    //Natali added
+    NSData* data = info[CBAdvertisementDataManufacturerDataKey];
+    NSLog(@"Data %@", data); //80eaca70 a5d502
+    NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
+    NSLog(@"Arr %@", arr);
+    if ([arr isEqual: @"<70a5d5>"]) {
+        bluetoothManager.device.model = @"Turn_left.obj"; //@"iot585.obj";
+        bluetoothManager.device.texture = @"CylinderSurface_Color.png"; //@"iot585_texture_mirror.png";
+    } else {
+        bluetoothManager.device.model = @"give_way_znak_0003.obj";
+        bluetoothManager.device.texture = @"Give_waySurface_Color.png";
+    }
+    //
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;

@@ -12,6 +12,8 @@
 #import "TemperatureSensor.h"
 #import <LoginWithAmazon/LoginWithAmazon.h>
 #import <YandexMapKit/YMKMapKitFactory.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -32,6 +34,7 @@
     
     //Natali added for Yandex map
     [YMKMapKit setApiKey: @"4ea80c68-a61a-4c33-a1b1-d8e4581725cf"];
+    [Fabric with:@[[Crashlytics class]]];
 
     return YES;
 }

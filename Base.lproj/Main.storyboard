@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I6y-Se-UjV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I6y-Se-UjV">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -2913,11 +2913,11 @@
                         <viewControllerLayoutGuide type="bottom" id="UYt-KE-U8V"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oTy-FG-e89">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWA-mw-jhP" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Температура" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWB-54-Xfg">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -2926,7 +2926,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6M-1A-bWD">
-                                        <rect key="frame" x="129" y="87" width="42" height="108"/>
+                                        <rect key="frame" x="129" y="42.666666666666657" width="42" height="108"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-temp-filled" translatesAutoresizingMaskIntoConstraints="NO" id="0Im-xL-V9t">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="108"/>
@@ -2960,7 +2960,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не применимо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM3-y8-S7e">
-                                        <rect key="frame" x="8" y="256" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="167.33333333333334" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4814,11 +4814,11 @@
                         <viewControllerLayoutGuide type="bottom" id="06i-fu-PMH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RKN-k6-cZC">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-a1-kBo" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Влажность" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q25-lD-w0w">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -4827,7 +4827,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1h-le-ujM">
-                                        <rect key="frame" x="116.66666666666669" y="93" width="67" height="96"/>
+                                        <rect key="frame" x="116.66666666666669" y="48.666666666666657" width="67" height="96"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-humid-filled" translatesAutoresizingMaskIntoConstraints="NO" id="qSR-Us-tdT">
                                                 <rect key="frame" x="0.0" y="0.0" width="67" height="96"/>
@@ -4851,7 +4851,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не применимо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYs-fD-EGB">
-                                        <rect key="frame" x="8" y="256" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="167.33333333333334" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4898,11 +4898,11 @@
                         <viewControllerLayoutGuide type="bottom" id="93E-MQ-32H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="29l-Q1-VQn">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-Xf-nO7" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давление" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-Nb-5tY">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -4911,14 +4911,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-pressure" translatesAutoresizingMaskIntoConstraints="NO" id="idG-23-BNp">
-                                        <rect key="frame" x="130.66666666666666" y="82" width="39" height="118"/>
+                                        <rect key="frame" x="130.66666666666666" y="37.666666666666657" width="39" height="118"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="118" id="6Fa-wm-0td"/>
                                             <constraint firstAttribute="width" constant="39" id="75A-pJ-oMh"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не применимо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-8F-UuK">
-                                        <rect key="frame" x="8" y="256" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="167.33333333333334" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5370,56 +5370,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ok-QE-hin" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="193"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Удаленность" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-JD-IPc">
-                                        <rect key="frame" x="8" y="20" width="284" height="20"/>
-                                        <fontDescription key="fontDescription" name="RockwellStd" family="Rockwell Std" pointSize="20"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18z-xb-YYB">
                                         <rect key="frame" x="100" y="48.666666666666657" width="100" height="96"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-proximity" translatesAutoresizingMaskIntoConstraints="NO" id="9rk-aK-PBy">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
-                                                <color key="tintColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
-                                            </imageView>
-                                        </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="9rk-aK-PBy" secondAttribute="trailing" id="4Mr-Iw-Mef"/>
-                                            <constraint firstItem="9rk-aK-PBy" firstAttribute="top" secondItem="18z-xb-YYB" secondAttribute="top" id="FhA-Cw-Yg8"/>
-                                            <constraint firstAttribute="bottom" secondItem="9rk-aK-PBy" secondAttribute="bottom" id="cBW-Wy-v2i"/>
                                             <constraint firstAttribute="height" constant="96" id="fTD-3t-11d"/>
                                             <constraint firstAttribute="width" constant="100" id="n03-Dj-7Uc"/>
-                                            <constraint firstItem="9rk-aK-PBy" firstAttribute="leading" secondItem="18z-xb-YYB" secondAttribute="leading" id="qbk-8M-iUw"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не применимо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-j0-OeN">
-                                        <rect key="frame" x="8" y="167" width="284" height="18"/>
-                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-battery-warning" translatesAutoresizingMaskIntoConstraints="NO" id="waG-RW-PUt">
-                                        <rect key="frame" x="272" y="14" width="24" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="tmc-dN-qH4"/>
-                                            <constraint firstAttribute="height" constant="24" id="xg6-3i-UVs"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="18z-xb-YYB" firstAttribute="centerY" secondItem="4Ok-QE-hin" secondAttribute="centerY" id="0Rv-eq-CBa"/>
-                                    <constraint firstItem="X9g-j0-OeN" firstAttribute="leading" secondItem="4Ok-QE-hin" secondAttribute="leading" constant="8" id="AkH-RL-yHE"/>
-                                    <constraint firstAttribute="trailing" secondItem="X9g-j0-OeN" secondAttribute="trailing" constant="8" id="Bpr-gk-Uu2"/>
-                                    <constraint firstItem="waG-RW-PUt" firstAttribute="centerY" secondItem="FbK-JD-IPc" secondAttribute="centerY" constant="-4" id="DSc-bg-i9M"/>
-                                    <constraint firstAttribute="trailing" secondItem="waG-RW-PUt" secondAttribute="trailing" constant="4" id="DVC-To-ySE"/>
-                                    <constraint firstItem="FbK-JD-IPc" firstAttribute="top" secondItem="4Ok-QE-hin" secondAttribute="top" constant="20" id="FCg-n1-Usi"/>
-                                    <constraint firstAttribute="bottom" secondItem="X9g-j0-OeN" secondAttribute="bottom" constant="8" id="KCA-Li-VJu"/>
                                     <constraint firstItem="18z-xb-YYB" firstAttribute="centerX" secondItem="4Ok-QE-hin" secondAttribute="centerX" id="Mxe-OI-o56"/>
-                                    <constraint firstAttribute="trailing" secondItem="FbK-JD-IPc" secondAttribute="trailing" constant="8" id="Q7q-hu-dKr"/>
-                                    <constraint firstItem="FbK-JD-IPc" firstAttribute="leading" secondItem="4Ok-QE-hin" secondAttribute="leading" constant="8" id="ohi-Vh-Jnx"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -5432,10 +5395,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="batteryWarningImage" destination="waG-RW-PUt" id="6EY-Au-ely"/>
                         <outlet property="chartView" destination="4Ok-QE-hin" id="rvh-at-T8a"/>
-                        <outlet property="displayLabel" destination="X9g-j0-OeN" id="Sck-9a-Jki"/>
-                        <outlet property="imageView" destination="9rk-aK-PBy" id="YGA-15-M2n"/>
                         <outlet property="imageViewHeightConstraint" destination="fTD-3t-11d" id="cbH-gu-eiN"/>
                     </connections>
                 </viewController>
@@ -5807,7 +5767,6 @@
         <image name="icon-menu-sensorfusion" width="24" height="24"/>
         <image name="icon-menu-sensors" width="24" height="24"/>
         <image name="icon-pressure" width="30" height="91"/>
-        <image name="icon-proximity" width="48" height="48"/>
         <image name="icon-temp" width="26" height="81"/>
         <image name="icon-temp-filled" width="26" height="81"/>
         <image name="icon_alert" width="24" height="24"/>
@@ -5818,11 +5777,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="l7U-n4-srC"/>
         <segue reference="W0W-HH-kCe"/>
-        <segue reference="hDu-QB-9Sw"/>
-        <segue reference="Dbf-lM-i22"/>
+        <segue reference="VsE-5R-Axh"/>
+        <segue reference="J4s-Yp-05i"/>
         <segue reference="mPD-A2-J1c"/>
         <segue reference="WjE-Xi-AT3"/>
         <segue reference="mHq-jP-Mvk"/>
-        <segue reference="zoD-t7-o7R"/>
+        <segue reference="d31-t6-oYk"/>
     </inferredMetricsTieBreakers>
 </document>

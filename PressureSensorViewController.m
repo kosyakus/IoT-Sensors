@@ -10,7 +10,7 @@
 
 #import "PressureSensorViewController.h"
 
-static NSString* const UNIT = @" hPa";
+static NSString* const UNIT = @" мм.рт.ст."; //@" hPa";
 
 @implementation PressureSensorViewController {
     float previousValue;
@@ -37,7 +37,8 @@ static NSString* const UNIT = @" hPa";
         return;
 
     float value = self.sensor.displayValue;
-    self.displayLabel.text = [NSString stringWithFormat:@"%.1f%@", value / 100.f, UNIT];
+    self.displayLabel.text = [NSString stringWithFormat:@"%.1f%@", (value * 0.75006375541921) / 100.f, UNIT];
+    //NSLog(@"%.1f%@", (value * 0.75006375541921) / 100.f, UNIT);
 
     if (previousValue != 0) {
         float difference = MAX(-20, MIN(20, previousValue - value));

@@ -49,7 +49,9 @@
     self.cloudSupport = FALSE;
     self.model = @"give_way_znak_0003.obj"; //@"DIAGR_DW_Final_Dcase.obj";
     self.texture = @"Give_waySurface_Color.png"; //@"pattern.png";
-
+    //self.model = @"Turn_left.obj"; //@"iot585.obj";
+    //self.texture = @"CylinderSurface_Color.png";
+    
     self.environmental = [[BME280 alloc] init];
     self.imu = [[BMI160 alloc] init];
     self.magneto = [[BMM150 alloc] init];

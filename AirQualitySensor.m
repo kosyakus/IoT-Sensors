@@ -12,19 +12,19 @@
 
 
 NSString* const AIR_QUALITY_ACCURACY_TEXT[] = {
-    @"Unreliable",
-    @"Low Accuracy",
-    @"Medium Accuracy",
-    @"High Accuracy",
+    @"Нестабильно", //@"Unreliable",
+    @"Низкая точность", //@"Low Accuracy",
+    @"Средняя точность", //@"Medium Accuracy",
+    @"Высокая точность", //@"High Accuracy",
 };
 
 NSString* const AIR_QUALITY_TEXT[] = {
-    @"Good",
-    @"Moderate",
-    @"Unhealthy (sensitive)",
-    @"Unhealthy",
-    @"Highly Unhealthy",
-    @"Hazardous",
+    @"Хорошее", //@"Good",
+    @"Умеренное", //@"Moderate",
+    @"Небезопасное (ощущается)", //@"Unhealthy (sensitive)",
+    @"Небезопасное", //@"Unhealthy",
+    @"Крайне небезопасное", //@"Highly Unhealthy",
+    @"Опасное", //@"Hazardous",
 };
 
 const uint32_t AIR_QUALITY_COLOR[] = {

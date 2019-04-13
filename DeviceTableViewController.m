@@ -92,9 +92,9 @@
         /*YMKPoint *target = [YMKPoint pointWithLatitude:55.677688 longitude:37.632798];
         YMKPoint *target2 = [YMKPoint pointWithLatitude:55.676275 longitude:37.632636];
         YMKPoint *target3 = [YMKPoint pointWithLatitude:55.676282 longitude:37.632672];*/
-        self.target = [YMKPoint pointWithLatitude:55.677688 longitude:37.632798];
-        self.target2 = [YMKPoint pointWithLatitude:55.680457 longitude:37.633108];
-        self.target3 = [YMKPoint pointWithLatitude:55.676455 longitude:37.633078];
+        self.target = [YMKPoint pointWithLatitude:55.678137 longitude:37.630726];
+        self.target2 = [YMKPoint pointWithLatitude:55.678108 longitude:37.631070];
+        //self.target3 = [YMKPoint pointWithLatitude:55.676455 longitude:37.633078];
         [self.mapView.mapWindow.map moveWithCameraPosition:[YMKCameraPosition cameraPositionWithTarget:_target
                                                                                                   zoom:15
                                                                                                azimuth:0

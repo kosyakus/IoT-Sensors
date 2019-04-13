@@ -3036,18 +3036,18 @@
                         <viewControllerLayoutGuide type="bottom" id="HGk-ZB-kRO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1ec-Zz-V0t">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="193.33333333333334"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1th-fm-f6j" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="193.33333333333334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-FP-nBg" customClass="GLModelView">
-                                        <rect key="frame" x="8" y="8" width="584" height="177.33333333333334"/>
+                                        <rect key="frame" x="8" y="8" width="284" height="266"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Компас" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-uG-Yc9">
-                                        <rect key="frame" x="8" y="20" width="584" height="20"/>
+                                        <rect key="frame" x="8" y="20" width="284" height="20"/>
                                         <fontDescription key="fontDescription" name="RockwellStd" family="Rockwell Std" pointSize="20"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3060,7 +3060,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_alert" translatesAutoresizingMaskIntoConstraints="NO" id="ozI-05-ks6">
-                                        <rect key="frame" x="568" y="17" width="24" height="24"/>
+                                        <rect key="frame" x="268" y="17" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="M5Y-jO-cd3"/>
                                             <constraint firstAttribute="height" constant="24" id="Utn-VN-L7E"/>
@@ -3083,7 +3083,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не применимо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guO-HM-tqW">
-                                <rect key="frame" x="8" y="167.33333333333334" width="584" height="18"/>
+                                <rect key="frame" x="8" y="256" width="284" height="18"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3372,14 +3372,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Chip firmware version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lug-ze-KEr">
-                                                    <rect key="frame" x="20" y="12" width="175" height="21"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="164.66666666666666" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvS-YN-cfX">
-                                                    <rect key="frame" x="386.66666666666669" y="12" width="7.333333333333333" height="21"/>
+                                                    <rect key="frame" x="388.33333333333331" y="11.000000000000002" width="5.666666666666667" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3396,14 +3396,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GDK-Ua-byG">
-                                                    <rect key="frame" x="19.999999999999993" y="12" width="96.333333333333329" height="21"/>
+                                                    <rect key="frame" x="19.999999999999993" y="11.000000000000002" width="90.333333333333329" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TJt-OS-Pwg">
-                                                    <rect key="frame" x="386.66666666666669" y="12" width="7.333333333333333" height="21"/>
+                                                    <rect key="frame" x="388.33333333333331" y="11.000000000000002" width="5.666666666666667" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3420,14 +3420,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="More info?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3la-Xl-9wr">
-                                                    <rect key="frame" x="20" y="12" width="86.333333333333329" height="21"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="80" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact support" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYc-Jn-Eds">
-                                                    <rect key="frame" x="244.33333333333337" y="12" width="131.66666666666666" height="21"/>
+                                                    <rect key="frame" x="253.66666666666671" y="11.000000000000002" width="122.33333333333333" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4751,18 +4751,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wQz-b9-y94"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Il-n2-7Cp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="193.33333333333331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yze-H1-L7U" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="193.33333333333334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIP-uE-cSp" customClass="GLModelView">
-                                        <rect key="frame" x="8" y="8" width="584" height="177.33333333333334"/>
+                                        <rect key="frame" x="8" y="8" width="284" height="266"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гироскоп" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qx-vG-jZg">
-                                        <rect key="frame" x="8" y="20" width="584" height="20"/>
+                                        <rect key="frame" x="8" y="20" width="284" height="20"/>
                                         <fontDescription key="fontDescription" name="RockwellStd" family="Rockwell Std" pointSize="20"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -4966,18 +4966,18 @@
                         <viewControllerLayoutGuide type="bottom" id="ZOl-Yk-l6k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QDh-JN-5vY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="193.33333333333331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RD9-2Q-oI3" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="193.33333333333334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFn-7g-9bG" customClass="GLModelView">
-                                        <rect key="frame" x="8" y="48" width="584" height="137.33333333333334"/>
+                                        <rect key="frame" x="8" y="48" width="284" height="226"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Акселерометр" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMB-8m-28B">
-                                        <rect key="frame" x="8" y="20" width="584" height="20"/>
+                                        <rect key="frame" x="8" y="20" width="284" height="20"/>
                                         <fontDescription key="fontDescription" name="RockwellStd" family="Rockwell Std" pointSize="20"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5776,12 +5776,12 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="l7U-n4-srC"/>
-        <segue reference="W0W-HH-kCe"/>
+        <segue reference="ZWw-dM-NtY"/>
         <segue reference="VsE-5R-Axh"/>
         <segue reference="J4s-Yp-05i"/>
-        <segue reference="mPD-A2-J1c"/>
+        <segue reference="ajM-Nj-jwe"/>
         <segue reference="WjE-Xi-AT3"/>
-        <segue reference="mHq-jP-Mvk"/>
+        <segue reference="TEo-nP-uBm"/>
         <segue reference="d31-t6-oYk"/>
     </inferredMetricsTieBreakers>
 </document>

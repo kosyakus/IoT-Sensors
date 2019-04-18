@@ -1555,10 +1555,10 @@
                                                                     <segue destination="WZK-No-gUe" kind="embed" identifier="sensorHumidity" id="Dbf-lM-i22"/>
                                                                 </connections>
                                                             </containerView>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxo-a6-Yvn">
-                                                                <rect key="frame" x="0.0" y="564" width="300" height="282"/>
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eln-IE-sNm">
+                                                                <rect key="frame" x="0.0" y="282" width="300" height="282"/>
                                                                 <connections>
-                                                                    <segue destination="YUE-AX-Sm0" kind="embed" identifier="sensorPressure" id="hDu-QB-9Sw"/>
+                                                                    <segue destination="ZbR-6I-FeE" kind="embed" identifier="sensorGyroscope" id="ajM-Nj-jwe"/>
                                                                 </connections>
                                                             </containerView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEM-yh-iW3">
@@ -1578,22 +1578,22 @@
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="gxo-a6-Yvn" firstAttribute="height" secondItem="FgU-fy-b1w" secondAttribute="height" id="16e-Ou-W0L"/>
                                                             <constraint firstItem="AEM-yh-iW3" firstAttribute="top" secondItem="FgU-fy-b1w" secondAttribute="bottom" id="2OY-gQ-OFW"/>
-                                                            <constraint firstItem="gxo-a6-Yvn" firstAttribute="top" secondItem="tFm-f2-2eQ" secondAttribute="bottom" id="2TS-gO-gXl"/>
                                                             <constraint firstItem="FgU-fy-b1w" firstAttribute="leading" secondItem="3EX-AQ-agu" secondAttribute="leading" id="2iq-Ls-cmc"/>
                                                             <constraint firstAttribute="trailing" secondItem="IDX-1Q-zRd" secondAttribute="trailing" id="6TA-yB-QA2"/>
                                                             <constraint firstAttribute="trailing" secondItem="FgU-fy-b1w" secondAttribute="trailing" id="7GX-pF-vmD"/>
-                                                            <constraint firstItem="gxo-a6-Yvn" firstAttribute="top" secondItem="IDX-1Q-zRd" secondAttribute="bottom" id="9Lo-p4-TiC"/>
+                                                            <constraint firstItem="IDX-1Q-zRd" firstAttribute="leading" secondItem="Eln-IE-sNm" secondAttribute="leading" id="9yE-7v-VGf"/>
                                                             <constraint firstAttribute="trailing" secondItem="AEM-yh-iW3" secondAttribute="trailing" id="Lvo-aA-CWw"/>
+                                                            <constraint firstItem="Eln-IE-sNm" firstAttribute="top" secondItem="AEM-yh-iW3" secondAttribute="top" id="Msw-kn-eJY"/>
                                                             <constraint firstItem="FgU-fy-b1w" firstAttribute="top" secondItem="3EX-AQ-agu" secondAttribute="top" id="Npf-qP-4k2"/>
                                                             <constraint firstItem="AEM-yh-iW3" firstAttribute="leading" secondItem="3EX-AQ-agu" secondAttribute="leading" id="RO0-7U-M5x"/>
-                                                            <constraint firstItem="gxo-a6-Yvn" firstAttribute="leading" secondItem="3EX-AQ-agu" secondAttribute="leading" id="SKX-P9-deu"/>
                                                             <constraint firstItem="tFm-f2-2eQ" firstAttribute="height" secondItem="FgU-fy-b1w" secondAttribute="height" id="TvM-0h-BFK"/>
                                                             <constraint firstItem="IDX-1Q-zRd" firstAttribute="leading" secondItem="3EX-AQ-agu" secondAttribute="leading" id="VQB-gV-SBL"/>
                                                             <constraint firstItem="tFm-f2-2eQ" firstAttribute="leading" secondItem="3EX-AQ-agu" secondAttribute="leading" id="XWs-Nx-efE"/>
-                                                            <constraint firstAttribute="trailing" secondItem="gxo-a6-Yvn" secondAttribute="trailing" id="arY-ee-TpC"/>
-                                                            <constraint firstAttribute="bottom" secondItem="gxo-a6-Yvn" secondAttribute="bottom" id="dRY-j2-vln"/>
+                                                            <constraint firstItem="IDX-1Q-zRd" firstAttribute="trailing" secondItem="Eln-IE-sNm" secondAttribute="trailing" id="fI1-BM-2Mj"/>
+                                                            <constraint firstItem="IDX-1Q-zRd" firstAttribute="top" secondItem="3EX-AQ-agu" secondAttribute="top" constant="563" id="htd-0g-z4V"/>
+                                                            <constraint firstItem="IDX-1Q-zRd" firstAttribute="bottom" secondItem="tFm-f2-2eQ" secondAttribute="bottom" id="i73-eh-ZYj"/>
+                                                            <constraint firstItem="IDX-1Q-zRd" firstAttribute="bottom" secondItem="Eln-IE-sNm" secondAttribute="bottom" id="jVg-YR-zUx"/>
                                                             <constraint firstAttribute="trailing" secondItem="tFm-f2-2eQ" secondAttribute="trailing" id="wIW-Pe-ok4"/>
                                                             <constraint firstItem="tFm-f2-2eQ" firstAttribute="top" secondItem="FgU-fy-b1w" secondAttribute="bottom" id="zI4-2E-IG7"/>
                                                         </constraints>
@@ -1607,10 +1607,10 @@
                                                                     <segue destination="otV-Ob-Uea" kind="embed" identifier="sensorMagnetometer" id="TEo-nP-uBm"/>
                                                                 </connections>
                                                             </containerView>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eln-IE-sNm">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxo-a6-Yvn">
                                                                 <rect key="frame" x="0.0" y="282" width="300" height="282"/>
                                                                 <connections>
-                                                                    <segue destination="ZbR-6I-FeE" kind="embed" identifier="sensorGyroscope" id="ajM-Nj-jwe"/>
+                                                                    <segue destination="YUE-AX-Sm0" kind="embed" identifier="sensorPressure" id="hDu-QB-9Sw"/>
                                                                 </connections>
                                                             </containerView>
                                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJM-KC-EhV">
@@ -1656,18 +1656,15 @@
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="bYo-Fz-TWJ" firstAttribute="trailing" secondItem="gxo-a6-Yvn" secondAttribute="trailing" id="0Se-4P-Au4"/>
                                                             <constraint firstItem="yJM-KC-EhV" firstAttribute="leading" secondItem="PSa-Ys-RqU" secondAttribute="leading" id="1aF-4n-wyV"/>
                                                             <constraint firstItem="bYo-Fz-TWJ" firstAttribute="leading" secondItem="PSa-Ys-RqU" secondAttribute="leading" id="1hb-86-sCW"/>
-                                                            <constraint firstItem="Eln-IE-sNm" firstAttribute="height" secondItem="4At-Ee-ClV" secondAttribute="height" id="3B9-2T-SLj"/>
-                                                            <constraint firstItem="Eln-IE-sNm" firstAttribute="leading" secondItem="PSa-Ys-RqU" secondAttribute="leading" id="ALb-Eo-5Tp"/>
                                                             <constraint firstAttribute="trailing" secondItem="urk-ue-Afb" secondAttribute="trailing" id="D79-UP-avI"/>
                                                             <constraint firstItem="bYo-Fz-TWJ" firstAttribute="top" secondItem="4At-Ee-ClV" secondAttribute="bottom" id="Grp-yj-3XA"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Eln-IE-sNm" secondAttribute="trailing" id="LBH-ig-iQX"/>
+                                                            <constraint firstItem="urk-ue-Afb" firstAttribute="bottom" secondItem="gxo-a6-Yvn" secondAttribute="bottom" id="POG-jS-YeL"/>
                                                             <constraint firstItem="yJM-KC-EhV" firstAttribute="top" secondItem="urk-ue-Afb" secondAttribute="bottom" id="Sdu-Zu-Lkn"/>
                                                             <constraint firstItem="4At-Ee-ClV" firstAttribute="leading" secondItem="PSa-Ys-RqU" secondAttribute="leading" id="XQR-5h-OL3"/>
-                                                            <constraint firstItem="yJM-KC-EhV" firstAttribute="top" secondItem="Eln-IE-sNm" secondAttribute="bottom" id="XfH-Sl-Vq8"/>
                                                             <constraint firstAttribute="bottom" secondItem="yJM-KC-EhV" secondAttribute="bottom" id="aDC-vh-nvy"/>
-                                                            <constraint firstItem="Eln-IE-sNm" firstAttribute="top" secondItem="4At-Ee-ClV" secondAttribute="bottom" id="cmv-5V-pG7"/>
                                                             <constraint firstItem="yJM-KC-EhV" firstAttribute="height" secondItem="4At-Ee-ClV" secondAttribute="height" id="dg8-c7-nyu"/>
                                                             <constraint firstItem="urk-ue-Afb" firstAttribute="leading" secondItem="PSa-Ys-RqU" secondAttribute="leading" id="fbe-Yy-Ih8"/>
                                                             <constraint firstAttribute="bottom" secondItem="YwO-Km-Btr" secondAttribute="bottom" constant="8" id="ksB-fM-Idp"/>
@@ -1676,6 +1673,9 @@
                                                             <constraint firstItem="4At-Ee-ClV" firstAttribute="top" secondItem="PSa-Ys-RqU" secondAttribute="top" id="qY5-of-Kwh"/>
                                                             <constraint firstAttribute="trailing" secondItem="yJM-KC-EhV" secondAttribute="trailing" id="s34-yN-rky"/>
                                                             <constraint firstAttribute="trailing" secondItem="bYo-Fz-TWJ" secondAttribute="trailing" id="uqE-Oi-6ni"/>
+                                                            <constraint firstItem="bYo-Fz-TWJ" firstAttribute="top" secondItem="PSa-Ys-RqU" secondAttribute="top" constant="282" id="xum-Bv-Uug"/>
+                                                            <constraint firstItem="bYo-Fz-TWJ" firstAttribute="leading" secondItem="gxo-a6-Yvn" secondAttribute="leading" id="yrW-Ld-OXO"/>
+                                                            <constraint firstItem="bYo-Fz-TWJ" firstAttribute="top" secondItem="gxo-a6-Yvn" secondAttribute="top" id="zvO-eV-oU6"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -3110,7 +3110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjw-bd-Wtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4061" y="-1068"/>
+            <point key="canvasLocation" x="4061" y="-1254"/>
         </scene>
         <!--IoT Sensors-->
         <scene sceneID="Pk1-zL-iUx">
@@ -3372,14 +3372,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Chip firmware version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lug-ze-KEr">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="164.66666666666666" height="21.666666666666668"/>
+                                                    <rect key="frame" x="20" y="12" width="175" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvS-YN-cfX">
-                                                    <rect key="frame" x="388.33333333333331" y="11.000000000000002" width="5.666666666666667" height="21.666666666666668"/>
+                                                    <rect key="frame" x="386.66666666666669" y="12" width="7.333333333333333" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3396,14 +3396,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GDK-Ua-byG">
-                                                    <rect key="frame" x="19.999999999999993" y="11.000000000000002" width="90.333333333333329" height="21.666666666666668"/>
+                                                    <rect key="frame" x="19.999999999999993" y="12" width="96.333333333333329" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TJt-OS-Pwg">
-                                                    <rect key="frame" x="388.33333333333331" y="11.000000000000002" width="5.666666666666667" height="21.666666666666668"/>
+                                                    <rect key="frame" x="386.66666666666669" y="12" width="7.333333333333333" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3420,14 +3420,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="More info?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3la-Xl-9wr">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="80" height="21.666666666666668"/>
+                                                    <rect key="frame" x="20" y="12" width="86.333333333333329" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contact support" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYc-Jn-Eds">
-                                                    <rect key="frame" x="253.66666666666671" y="11.000000000000002" width="122.33333333333333" height="21.666666666666668"/>
+                                                    <rect key="frame" x="244.33333333333337" y="12" width="131.66666666666666" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4803,7 +4803,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywb-bM-dgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4061" y="-841"/>
+            <point key="canvasLocation" x="4061" y="-935"/>
         </scene>
         <!--Humidity Sensor View Controller-->
         <scene sceneID="4Un-PI-9RS">
@@ -4898,11 +4898,11 @@
                         <viewControllerLayoutGuide type="bottom" id="93E-MQ-32H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="29l-Q1-VQn">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333337"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAa-Xf-nO7" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давление" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcw-Nb-5tY">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -4911,14 +4911,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-pressure" translatesAutoresizingMaskIntoConstraints="NO" id="idG-23-BNp">
-                                        <rect key="frame" x="130.66666666666666" y="37.666666666666657" width="39" height="118"/>
+                                        <rect key="frame" x="130.66666666666666" y="38" width="39" height="118"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="118" id="6Fa-wm-0td"/>
                                             <constraint firstAttribute="width" constant="39" id="75A-pJ-oMh"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не применимо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-8F-UuK">
-                                        <rect key="frame" x="8" y="167.33333333333334" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="168" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5018,7 +5018,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzr-Ai-Cvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4061" y="-621"/>
+            <point key="canvasLocation" x="4061" y="-628"/>
         </scene>
         <!--IoT Sensors-->
         <scene sceneID="g34-C0-3rv">
@@ -5085,10 +5085,10 @@
                                                             <segue destination="WZK-No-gUe" kind="embed" identifier="sensorHumidity" id="J4s-Yp-05i"/>
                                                         </connections>
                                                     </containerView>
-                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZy-fY-J1M">
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-pw-JLh">
                                                         <rect key="frame" x="0.0" y="386.66666666666663" width="300" height="193.33333333333337"/>
                                                         <connections>
-                                                            <segue destination="YUE-AX-Sm0" kind="embed" identifier="sensorPressure" id="VsE-5R-Axh"/>
+                                                            <segue destination="Ukj-m2-DQ8" kind="embed" identifier="sensorAirQuality" id="4tk-78-PiZ"/>
                                                         </connections>
                                                     </containerView>
                                                 </subviews>
@@ -5098,14 +5098,17 @@
                                                 <subviews>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-EX-zce">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="193"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="193" id="9e1-wd-UWI"/>
+                                                        </constraints>
                                                         <connections>
                                                             <segue destination="7J9-5A-SI4" kind="embed" identifier="sensorAmbientLight" id="HS0-V0-gGb"/>
                                                         </connections>
                                                     </containerView>
-                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-pw-JLh">
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZy-fY-J1M">
                                                         <rect key="frame" x="0.0" y="193" width="300" height="194"/>
                                                         <connections>
-                                                            <segue destination="Ukj-m2-DQ8" kind="embed" identifier="sensorAirQuality" id="4tk-78-PiZ"/>
+                                                            <segue destination="YUE-AX-Sm0" kind="embed" identifier="sensorPressure" id="VsE-5R-Axh"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jj-7r-cuA">
@@ -5116,8 +5119,7 @@
                                                     </containerView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="zQD-pw-JLh" firstAttribute="centerY" secondItem="lS1-ej-gr3" secondAttribute="centerY" id="LuJ-7x-ywv"/>
-                                                    <constraint firstItem="zQD-pw-JLh" firstAttribute="top" secondItem="lS1-ej-gr3" secondAttribute="top" constant="193" id="mzW-iY-GGB"/>
+                                                    <constraint firstItem="7jj-7r-cuA" firstAttribute="top" secondItem="lS1-ej-gr3" secondAttribute="top" constant="387" id="PpY-6V-PoC"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -5271,11 +5273,11 @@
                         <viewControllerLayoutGuide type="bottom" id="eaa-XR-YnZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DDO-b9-LzB">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOe-4v-DYw" customClass="LineChartView" customModule="IoT_Sensors" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="193.33333333333334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Качество воздуха" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEz-Xy-0wL">
                                         <rect key="frame" x="8" y="20" width="284" height="20"/>
@@ -5284,7 +5286,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVv-dy-WHI">
-                                        <rect key="frame" x="100" y="49" width="100" height="96"/>
+                                        <rect key="frame" x="100" y="48.666666666666657" width="100" height="96"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-air-quality" translatesAutoresizingMaskIntoConstraints="NO" id="e0v-rN-4cf">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
@@ -5302,13 +5304,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не применимо" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAi-Ha-7k5">
-                                        <rect key="frame" x="8" y="150.33333333333334" width="284" height="18"/>
+                                        <rect key="frame" x="8" y="149.66666666666666" width="284" height="18"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="нестабильно" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DP-Ir-irJ">
-                                        <rect key="frame" x="8" y="170.33333333333334" width="284" height="15.666666666666657"/>
+                                        <rect key="frame" x="8" y="169.66666666666666" width="284" height="15.666666666666657"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15.67" id="aO5-Yn-oFn"/>
                                         </constraints>
@@ -5358,6 +5360,7 @@
         <!--Proximity Sensor View Controller-->
         <scene sceneID="Knb-oZ-91Z">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPf-Oy-vLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jpQ-Wf-tMD" customClass="ProximitySensorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ebd-Vt-zY7"/>
@@ -5399,7 +5402,6 @@
                         <outlet property="imageViewHeightConstraint" destination="fTD-3t-11d" id="cbH-gu-eiN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dPf-Oy-vLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4061" y="112"/>
         </scene>

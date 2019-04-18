@@ -96,7 +96,7 @@
         self.target2 = [YMKPoint pointWithLatitude:55.678108 longitude:37.631070];
         //self.target3 = [YMKPoint pointWithLatitude:55.676455 longitude:37.633078];
         [self.mapView.mapWindow.map moveWithCameraPosition:[YMKCameraPosition cameraPositionWithTarget:_target
-                                                                                                  zoom:15
+                                                                                                  zoom:17
                                                                                                azimuth:0
                                                                                                   tilt:0]];
         if (self.devices.count == 1) {

@@ -88,8 +88,8 @@ static NSArray* SENSOR_MENU_LAYOUT;
     self.sensorMenuLayout = SENSOR_MENU_LAYOUT;
     //Natali changed
     
-    self.model = @"Turn_left.obj"; //@"iot585.obj";
-    self.texture = @"CylinderSurface_Color.png"; //@"iot585_texture_mirror.png";
+    self.model = @"PeugeotOnyxConcept.obj"; //@"iot585.obj";
+    self.texture = @"PeugeotOnyxConcept.1.2.png"; //@"iot585_texture_mirror.png";
     
     //self.model = @"iot585.obj";
     //self.texture = @"iot585_texture_mirror.png";

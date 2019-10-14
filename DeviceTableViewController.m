@@ -271,11 +271,11 @@
     NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
     NSLog(@"Arr %@", arr);
     if ([arr isEqual: @"<70a5d5>"]) {
-        bluetoothManager.device.model = @"Turn_left.obj"; //@"iot585.obj";
-        bluetoothManager.device.texture = @"CylinderSurface_Color.png"; //@"iot585_texture_mirror.png";
+        bluetoothManager.device.model = @"PeugeotOnyxConcept.obj"; //@"iot585.obj";
+        bluetoothManager.device.texture = @"PeugeotOnyxConcept.1.2.png"; //@"iot585_texture_mirror.png";
     } else {
-        bluetoothManager.device.model = @"give_way_znak_0003.obj";
-        bluetoothManager.device.texture = @"Give_waySurface_Color.png";
+        bluetoothManager.device.model = @"Audi_R8_2017.obj";
+        bluetoothManager.device.texture = @"Audi_R8_2017.1.png";
     }
     //
     
@@ -717,11 +717,11 @@
     NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
     NSLog(@"Arr %@", arr);
     if ([arr isEqual: @"<70a5d5>"]) {
-        bluetoothManager.device.model = @"Turn_left.obj"; //@"iot585.obj";
-        bluetoothManager.device.texture = @"CylinderSurface_Color.png"; //@"iot585_texture_mirror.png";
+        bluetoothManager.device.model = @"PeugeotOnyxConcept.obj"; //@"iot585.obj";
+        bluetoothManager.device.texture = @"PeugeotOnyxConcept.1.2.png"; //@"iot585_texture_mirror.png";
     } else {
-        bluetoothManager.device.model = @"give_way_znak_0003.obj";
-        bluetoothManager.device.texture = @"Give_waySurface_Color.png";
+        bluetoothManager.device.model = @"Audi_R8_2017.obj";
+        bluetoothManager.device.texture = @"Audi_R8_2017.1.png";
     }
     //
 

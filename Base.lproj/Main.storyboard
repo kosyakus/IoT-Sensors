@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="1630" y="448"/>
         </scene>
-        <!--Дорожные знаки-->
+        <!--Мои автомобили-->
         <scene sceneID="Iv6-uJ-Kgv">
             <objects>
                 <tableViewController id="2LN-ds-kMD" customClass="DeviceTableViewController" sceneMemberID="viewController">
@@ -157,7 +157,7 @@
                             <outlet property="delegate" destination="2LN-ds-kMD" id="YhK-eK-Rcu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Дорожные знаки" id="LQi-6j-T6n">
+                    <navigationItem key="navigationItem" title="Мои автомобили" id="LQi-6j-T6n">
                         <barButtonItem key="backBarButtonItem" title="Devices" id="MHQ-bQ-uUw"/>
                         <barButtonItem key="leftBarButtonItem" enabled="NO" id="k3M-Ra-Bin">
                             <connections>
@@ -551,7 +551,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplasnNew" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-fn-wkM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplasnNew" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-fn-wkM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="loader_line" translatesAutoresizingMaskIntoConstraints="NO" id="u29-7y-s1e">
@@ -5360,7 +5360,6 @@
         <!--Proximity Sensor View Controller-->
         <scene sceneID="Knb-oZ-91Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dPf-Oy-vLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jpQ-Wf-tMD" customClass="ProximitySensorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ebd-Vt-zY7"/>
@@ -5402,6 +5401,7 @@
                         <outlet property="imageViewHeightConstraint" destination="fTD-3t-11d" id="cbH-gu-eiN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPf-Oy-vLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4061" y="112"/>
         </scene>
@@ -5741,7 +5741,7 @@
     <resources>
         <image name="LoginButtonIcon" width="314" height="72"/>
         <image name="MicIcon" width="134" height="137"/>
-        <image name="SplasnNew" width="375" height="667"/>
+        <image name="SplasnNew" width="1024" height="1024"/>
         <image name="accel-calibration.jpg" width="402" height="256"/>
         <image name="cic_disclaimer" width="20" height="20"/>
         <image name="cic_info" width="21" height="21"/>

@@ -108,11 +108,11 @@
             NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
             NSLog(@"Arr %@", arr);
             //NSUUID *arr = [[NSUUID alloc] initWithUUIDString:@"DA01B247-BC6A-9C20-08F2-F5D819EB926C"];
-            if ([arr isEqual: @"<70a5d5>"]) {
-                [self createPlaceMarkWithTarget:_target andIcon:@"icon-turn-left"];
+            if ([arr isEqual: @"<70a5ce>"]) { // 70a5ce  70a5d5
+                [self createPlaceMarkWithTarget:_target andIcon:@"porsche"];
                 
             } else {
-                [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
+                [self createPlaceMarkWithTarget:_target2 andIcon:@"audi"];
             }
             
         } else if (self.devices.count == 2) {
@@ -123,10 +123,10 @@
                 NSLog(@"Data %@", data); //80eaca70 a5d502
                 NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
                 NSLog(@"Arr %@", arr);
-                if ([arr isEqual: @"<70a5d5>"]) {
-                    [self createPlaceMarkWithTarget:_target andIcon:@"icon-turn-left"];
+                if ([arr isEqual: @"<70a5ce>"]) {
+                    [self createPlaceMarkWithTarget:_target andIcon:@"porsche"];
                 } else {
-                    [self createPlaceMarkWithTarget:_target2 andIcon:@"icon-give-way"];
+                    [self createPlaceMarkWithTarget:_target2 andIcon:@"audi"];
                 }
                 
             }
@@ -219,7 +219,7 @@
                 NSLog(@"Data %@", data); //80eaca70 a5d502
                 NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
                 NSLog(@"Arr %@", arr);
-                if ([arr isEqual: @"<70a5d5>"]) {
+                if ([arr isEqual: @"<70a5ce>"]) {
                 } else {
                     peripheral = self.devices[1];
                     info = self.devicesInfo[1];
@@ -232,7 +232,7 @@
                 NSLog(@"Data %@", data); //80eaca70 a5d502
                 NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
                 NSLog(@"Arr %@", arr);
-                if ([arr isEqual: @"<70a5d5>"]) {
+                if ([arr isEqual: @"<70a5ce>"]) {
                     peripheral = self.devices[1];
                     info = self.devicesInfo[1];
                 } else {
@@ -270,12 +270,12 @@
     NSLog(@"Data %@", data); //80eaca70 a5d502
     NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
     NSLog(@"Arr %@", arr);
-    if ([arr isEqual: @"<70a5d5>"]) {
-        bluetoothManager.device.model = @"PeugeotOnyxConcept.obj"; //@"iot585.obj";
-        bluetoothManager.device.texture = @"PeugeotOnyxConcept.1.2.png"; //@"iot585_texture_mirror.png";
+    if ([arr isEqual: @"<70a5ce>"]) {
+        bluetoothManager.device.model = @"low_poly_911.obj"; //@"iot585.obj";
+        bluetoothManager.device.texture = @"pattern.png"; //@"iot585_texture_mirror.png";
     } else {
-        bluetoothManager.device.model = @"Audi_R8_2017.obj";
-        bluetoothManager.device.texture = @"Audi_R8_2017.1.png";
+        bluetoothManager.device.model = @"Audi TT.obj";
+        bluetoothManager.device.texture = @"green.png";
     }
     //
     
@@ -676,14 +676,14 @@
     info[@"ekid"] = ekid;
     //
     NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
-    if ([arr isEqual: @"<70a5d5>"]) {
-        cell.deviceNameLabel.text = @"Движение налево"; //@"Главная дорога";
-        cell.deviceImageView.image = [UIImage imageNamed: @"turnLeft.png"]; //[UIImage imageNamed: @"mainRoad.png"];
-        cell.versionLabel.text = @"Дорожный знак №4.1.3"; //@"Дорожный знак №2.1";
+    if ([arr isEqual: @"<70a5ce>"]) {
+        cell.deviceNameLabel.text = @"Porsche 911"; //@"Главная дорога";
+        cell.deviceImageView.image = [UIImage imageNamed: @"porsche911.jpg"]; //[UIImage imageNamed: @"mainRoad.png"];
+        cell.versionLabel.text = @"Автомобиль"; //@"Дорожный знак №2.1";
     } else {
-        cell.deviceNameLabel.text = @"Уступи дорогу";
-        cell.deviceImageView.image = [UIImage imageNamed: @"giveWay.png"];
-        cell.versionLabel.text = @"Дорожный знак №2.4";
+        cell.deviceNameLabel.text = @"Audi TT";
+        cell.deviceImageView.image = [UIImage imageNamed: @"auditt.jpg"];
+        cell.versionLabel.text = @"Автомобиль";
     }
     //cell.deviceNameLabel.text = [IotDeviceSpec getProperNameFromAdvName:name];
     //cell.deviceImageView.image = [UIImage imageNamed:icon];
@@ -716,12 +716,12 @@
     NSLog(@"Data %@", data); //80eaca70 a5d502
     NSString *arr = [NSString stringWithFormat:@"%@", data.length == 3 ? data : [data subdataWithRange:NSMakeRange(3, 3)]];
     NSLog(@"Arr %@", arr);
-    if ([arr isEqual: @"<70a5d5>"]) {
-        bluetoothManager.device.model = @"PeugeotOnyxConcept.obj"; //@"iot585.obj";
-        bluetoothManager.device.texture = @"PeugeotOnyxConcept.1.2.png"; //@"iot585_texture_mirror.png";
+    if ([arr isEqual: @"<70a5ce>"]) { //70a5ce  70a5d5 - old
+        bluetoothManager.device.model = @"low_poly_911.obj"; //@"iot585.obj";
+        bluetoothManager.device.texture = @"pattern.png"; //@"iot585_texture_mirror.png";
     } else {
-        bluetoothManager.device.model = @"Audi_R8_2017.obj";
-        bluetoothManager.device.texture = @"Audi_R8_2017.1.png";
+        bluetoothManager.device.model = @"Audi TT.obj";
+        bluetoothManager.device.texture = @"green.png";
     }
     //
 

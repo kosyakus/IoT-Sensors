@@ -47,8 +47,9 @@
 
     self.deviceType = DEVICE_TYPE_IOT_580;
     self.cloudSupport = FALSE;
-    self.model = @"Audi_R8_2017.obj"; //@"DIAGR_DW_Final_Dcase.obj";
-    self.texture = @"Audi_R8_2017.1.png"; //@"pattern.png";
+    self.model = @"Audi TT.obj"; //@"DIAGR_DW_Final_Dcase.obj";
+    self.texture = @"green.png"; //@"pattern.png";
+    
     //self.model = @"Turn_left.obj"; //@"iot585.obj";
     //self.texture = @"CylinderSurface_Color.png";
     

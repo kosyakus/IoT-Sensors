@@ -196,6 +196,12 @@
     CGFloat modelScale = 1.f;
     switch (self.device.type) {
         case DEVICE_TYPE_IOT_580:
+            /*NSLog(@"self.device.modelrr %@", self.device.model);
+            if ([self.device.model isEqualToString: @"low_poly_911.obj"]) {
+                modelScale = self.view.frame.size.height / 9; //Porsche
+            } else {
+                modelScale = self.view.frame.size.height / 900; //Audi tt
+            }*/
             modelScale = self.view.frame.size.height / 700;
             break;
         case DEVICE_TYPE_WEARABLE:
@@ -203,11 +209,17 @@
             break;
         case DEVICE_TYPE_IOT_585:
             NSLog(@"Arr %@ and id %@", arr, self.device.peripheral.identifier);
-            if ([self.device.peripheral.identifier isEqual: arr]) {
+            if ([self.device.model isEqualToString: @"low_poly_911.obj"]) {
                 modelScale = self.view.frame.size.height / 9; //Porsche
             } else {
                 modelScale = self.view.frame.size.height / 900; //Audi tt
             }
+            
+            /*if ([self.device.peripheral.identifier isEqual: arr]) {
+                modelScale = self.view.frame.size.height / 9; //Porsche
+            } else {
+                modelScale = self.view.frame.size.height / 900; //Audi tt
+            }*/
             break;
     }
     CATransform3D transform = CATransform3DMakeScale(modelScale, -modelScale, modelScale);

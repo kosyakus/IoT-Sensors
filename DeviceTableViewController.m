@@ -239,16 +239,6 @@
                     
                 }
             }
-            
-            
-            /*
-            if (point.latitude < 55.680) {
-                peripheral = self.devices[0];
-                info = self.devicesInfo[0];
-            } else {
-                peripheral = self.devices[1];
-                info = self.devicesInfo[1];
-            }*/
         }
         
     } else if (self.devices.count>0 && point == self.target3) {
